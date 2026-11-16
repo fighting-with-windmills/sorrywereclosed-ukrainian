@@ -1,0 +1,30 @@
+# The repository lives inside the game folder, so ignore the game itself and
+# whitelist only the localization files.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/requirements.txt
+!/run.cmd
+!/tools/
+!/translations/
+
+# Local backups and build output
+_uk_backup/
+Assembly-CSharp.dll.uk_backup
+*.uk_tmp
+tools/AssemblyPatcher/bin/
+tools/AssemblyPatcher/obj/
+__pycache__/
+*.py[cod]
+
+# Large binary fonts are supplied separately (see translations/uk/fonts)
+translations/uk/fonts/*.ttf
+translations/uk/fonts/*.otf
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vs/
+.vscode/
+*.user

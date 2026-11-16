@@ -1,0 +1,1720 @@
+{
+  "Alerts": {
+    "generic_item_got": {
+      "en": "Got <itemName>.",
+      "uk": "Отримано <itemName>."
+    },
+    "generic_item_used": {
+      "en": "Used <itemName>.",
+      "uk": "Використано <itemName>."
+    },
+    "generic_item_dropped": {
+      "en": "Dropped <itemName>.",
+      "uk": "Викинуто <itemName>."
+    },
+    "health_pack_cannot_use": {
+      "en": "Can’t drink more right now.",
+      "uk": "Зараз більше не випити."
+    },
+    "health_pack_collected": {
+      "en": "Got a water bottle.",
+      "uk": "Отримано пляшку води."
+    },
+    "health_pack_empty": {
+      "en": "Don’t have any water bottles.",
+      "uk": "Немає пляшок води."
+    },
+    "health_pack_full": {
+      "en": "Can’t carry more water bottles.",
+      "uk": "Більше пляшок води не взяти."
+    },
+    "health_pack_used": {
+      "en": "Refreshing water!",
+      "uk": "Освіжна вода!"
+    },
+    "cannot_use": {
+      "en": "Can’t use this right now.",
+      "uk": "Зараз це не можна використати."
+    },
+    "cannot_use_ammo": {
+      "en": "Don’t have a weapon for this ammo.",
+      "uk": "Немає зброї для цих набоїв."
+    },
+    "get_third_eye": {
+      "en": "Third Eye Acquired.",
+      "uk": "Третє око отримано."
+    },
+    "get_axe": {
+      "en": "Axe Acquired.",
+      "uk": "Сокиру отримано."
+    },
+    "get_pistol": {
+      "en": "Hellhound Acquired.",
+      "uk": "Пекельного гончака отримано."
+    },
+    "get_heartbreak": {
+      "en": "Heartbreaker Acquired.",
+      "uk": "Серцеїда отримано."
+    },
+    "get_shotgun": {
+      "en": "Shotgun Acquired.",
+      "uk": "Дробовик отримано."
+    },
+    "third_eye_forced_closed": {
+      "en": "The Third Eye was forced shut.",
+      "uk": "Третє око примусово заплющено."
+    },
+    "third_eye_blocked": {
+      "en": "The Third Eye refuses to open.",
+      "uk": "Третє око не хоче відкриватися."
+    },
+    "pistol_ammo_get": {
+      "en": "Got pistol ammo.",
+      "uk": "Отримано набої для пістолета."
+    },
+    "pistol_ammo_full": {
+      "en": "Can’t carry more pistol ammo.",
+      "uk": "Більше набоїв для пістолета не взяти."
+    },
+    "shotgun_ammo_get": {
+      "en": "Got shotgun ammo.",
+      "uk": "Отримано набої для дробовика."
+    },
+    "shotgun_ammo_full": {
+      "en": "Can’t carry more shotgun ammo.",
+      "uk": "Більше набоїв для дробовика не взяти."
+    },
+    "heartbreak_full": {
+      "en": "Heartbreaker is already full.",
+      "uk": "Серцеїд уже заряджений."
+    },
+    "heartbreak_ready": {
+      "en": "Heartbreaker charged!",
+      "uk": "Серцеїд заряджено!"
+    },
+    "puzzle_success": {
+      "en": "Solved it!",
+      "uk": "Розв'язано!"
+    },
+    "puzzle_fail": {
+      "en": "Try again.",
+      "uk": "Спробуйте ще раз."
+    },
+    "perfect_combo": {
+      "en": "Perfect!",
+      "uk": "Ідеально!"
+    },
+    "generic_item_sold": {
+      "en": "Sold <itemName> for <price> Yowzas.",
+      "uk": "Продано <itemName> за <price> Яузів."
+    },
+    "generic_item_sold_single": {
+      "en": "Sold <itemName> for <price> Yowza.",
+      "uk": "Продано <itemName> за <price> Яузу."
+    },
+    "generic_item_purchased": {
+      "en": "Got <itemName> for <price> Yowzas.",
+      "uk": "Отримано <itemName> за <price> Яузів."
+    },
+    "generic_item_purchased_single": {
+      "en": "Got <itemName> for <price> Yowza.",
+      "uk": "Отримано <itemName> за <price> Яузу."
+    },
+    "generic_food_trade": {
+      "en": "Gave <itemName> for <price> Yowzas.",
+      "uk": "Віддано <itemName> за <price> Яузів."
+    },
+    "generic_food_trade_single": {
+      "en": "Gave <itemName> for <price> Yowza.",
+      "uk": "Віддано <itemName> за <price> Яузу."
+    },
+    "generic_get_money": {
+      "en": "Got <amount> Yowzas.",
+      "uk": "Отримано <amount> Яузів."
+    },
+    "generic_get_money_single": {
+      "en": "Got <amount> Yowza.",
+      "uk": "Отримано <amount> Яузу."
+    },
+    "ending_michelle_normal": {
+      "en": "Michelle",
+      "uk": "Мішель"
+    },
+    "ending_michelle_mimi": {
+      "en": "Mimi the Conqueror",
+      "uk": "Мімі Завойовниця"
+    },
+    "ending_michelle_royal": {
+      "en": "Her Royal Deadness",
+      "uk": "Її Королівська Мертвість"
+    }
+  },
+  "Captions": {
+    "gasp": {
+      "en": "gasps",
+      "uk": "зойкає"
+    },
+    "laugh": {
+      "en": "laughs",
+      "uk": "сміється"
+    },
+    "chuckle": {
+      "en": "chuckles",
+      "uk": "хихикає"
+    },
+    "scream": {
+      "en": "screams",
+      "uk": "кричить"
+    },
+    "cry": {
+      "en": "cries",
+      "uk": "плаче"
+    },
+    "grunt": {
+      "en": "grunts",
+      "uk": "бурчить"
+    },
+    "heavy_door_opening": {
+      "en": "Heavy door opening",
+      "uk": "Відчиняються важкі двері"
+    },
+    "heavy_door_closing": {
+      "en": "Heavy door closing",
+      "uk": "Зачиняються важкі двері"
+    },
+    "store_bell": {
+      "en": "Shop bell rings",
+      "uk": "Дзвенить дзвіночок у крамниці"
+    }
+  },
+  "Locations": {
+    "town_generic": {
+      "en": "Town",
+      "uk": "Місто"
+    },
+    "town_store": {
+      "en": "Michelle’s Store",
+      "uk": "Крамниця Мішель"
+    },
+    "town_apartments": {
+      "en": "Apartments",
+      "uk": "Квартири"
+    },
+    "town_bedroom": {
+      "en": "Michelle’s Bedroom",
+      "uk": "Спальня Мішель"
+    },
+    "town_bar": {
+      "en": "Darrel’s Bar",
+      "uk": "Бар Даррела"
+    },
+    "town_diner": {
+      "en": "Oakley’s Diner",
+      "uk": "Закусочна Оклі"
+    },
+    "town_record_store": {
+      "en": "Culture Shock",
+      "uk": "Culture Shock"
+    },
+    "town_church": {
+      "en": "Church",
+      "uk": "Церква"
+    },
+    "town_church_grounds": {
+      "en": "Churchyard",
+      "uk": "Церковне подвір'я"
+    },
+    "station_generic": {
+      "en": "Underground Station",
+      "uk": "Підземна станція"
+    },
+    "station_tickets": {
+      "en": "Underground Station",
+      "uk": "Підземна станція"
+    },
+    "station_platform": {
+      "en": "Station Platform",
+      "uk": "Платформа станції"
+    },
+    "station_offices": {
+      "en": "Station Offices",
+      "uk": "Офіси станції"
+    },
+    "station_train": {
+      "en": "Underground Train",
+      "uk": "Підземний потяг"
+    },
+    "station_crashed_train": {
+      "en": "Crashed Train",
+      "uk": "Розбитий потяг"
+    },
+    "aquarium_generic": {
+      "en": "Aquarium",
+      "uk": "Акваріум"
+    },
+    "aquarium_entrance": {
+      "en": "Aquarium Entrance",
+      "uk": "Вхід до акваріума"
+    },
+    "aquarium_main_tank": {
+      "en": "Aquarium Feature Tank",
+      "uk": "Головний акваріум"
+    },
+    "aquarium_maintenance": {
+      "en": "Aquarium Maintenance",
+      "uk": "Технічне приміщення акваріума"
+    },
+    "aquarium_basement": {
+      "en": "Aquarium Basement",
+      "uk": "Підвал акваріума"
+    },
+    "aquarium_customer_area": {
+      "en": "Aquarium Exhibit",
+      "uk": "Експозиція акваріума"
+    },
+    "aquarium_above_main_tank": {
+      "en": "Aquarium Upper Level",
+      "uk": "Верхній рівень акваріума"
+    },
+    "aquarium_burst_tank": {
+      "en": "Aquarium Feature Tank",
+      "uk": "Головний акваріум"
+    },
+    "crypt_generic": {
+      "en": "Crypt",
+      "uk": "Крипта"
+    },
+    "crypt_entrance": {
+      "en": "Crypt Entrance",
+      "uk": "Вхід до крипти"
+    },
+    "crypt_stairwell": {
+      "en": "Crypt Stairwell",
+      "uk": "Сходова клітка крипти"
+    },
+    "crypt_labyrinth": {
+      "en": "Crypt Labyrinth",
+      "uk": "Лабіринт крипти"
+    },
+    "crypt_cellar": {
+      "en": "Crypt Cellar",
+      "uk": "Підвал крипти"
+    },
+    "crypt_mausoleum_1": {
+      "en": "Crypt Mausoleum 1",
+      "uk": "Мавзолей крипти 1"
+    },
+    "crypt_oratory": {
+      "en": "Crypt Oratory",
+      "uk": "Молитовня крипти"
+    },
+    "crypt_traps": {
+      "en": "Crypt Passageway",
+      "uk": "Коридор крипти"
+    },
+    "crypt_mausoleum_2": {
+      "en": "Crypt Mausoleum 2",
+      "uk": "Мавзолей крипти 2"
+    },
+    "crypt_finale": {
+      "en": "Crypt Depths",
+      "uk": "Глибини крипти"
+    },
+    "palace_generic": {
+      "en": "Dream Eater’s Palace",
+      "uk": "Палац Пожирача снів"
+    },
+    "palace_piano_room": {
+      "en": "???",
+      "uk": "???"
+    },
+    "palace_lounge": {
+      "en": "Palace Lounge",
+      "uk": "Вітальня палацу"
+    },
+    "palace_study": {
+      "en": "Palace Study",
+      "uk": "Кабінет палацу"
+    },
+    "palace_chase": {
+      "en": "Palace Hallway",
+      "uk": "Коридор палацу"
+    },
+    "palace_library": {
+      "en": "Palace Library",
+      "uk": "Бібліотека палацу"
+    },
+    "palace_chapel": {
+      "en": "Palace Chapel",
+      "uk": "Каплиця палацу"
+    },
+    "hotel_generic": {
+      "en": "The Hotel",
+      "uk": "Готель"
+    },
+    "hotel_combat_act_1": {
+      "en": "The Hotel",
+      "uk": "Готель"
+    },
+    "hotel_combat_act_2": {
+      "en": "Hotel Ascent",
+      "uk": "Підйом у готелі"
+    },
+    "hotel_combat_act_3": {
+      "en": "Hotel Ascent",
+      "uk": "Підйом у готелі"
+    },
+    "hotel_boss": {
+      "en": "The Duchess",
+      "uk": "Герцогиня"
+    },
+    "final_stats": {
+      "en": "Thank You For Playing",
+      "uk": "Дякуємо за гру"
+    }
+  },
+  "Menus": {
+    "ui_save_indicator": {
+      "en": "Saving…",
+      "uk": "Збереження…"
+    },
+    "ui_logbook_indicator": {
+      "en": "Logbook<br>Updated",
+      "uk": "Журнал<br>оновлено"
+    },
+    "ui_load_indicator": {
+      "en": "Loading…",
+      "uk": "Завантаження…"
+    },
+    "start_new_game_button": {
+      "en": "New Game",
+      "uk": "Нова гра"
+    },
+    "start_load_game_button": {
+      "en": "Load",
+      "uk": "Завантажити"
+    },
+    "start_settings_button": {
+      "en": "Settings",
+      "uk": "Налаштування"
+    },
+    "start_quit_button": {
+      "en": "Quit",
+      "uk": "Вихід"
+    },
+    "start_wishlist_button": {
+      "en": "Wishlist",
+      "uk": "Список бажаного"
+    },
+    "start_level_select_button": {
+      "en": "Level Select",
+      "uk": "Вибір рівня"
+    },
+    "pause_continue_button": {
+      "en": "Continue",
+      "uk": "Продовжити"
+    },
+    "pause_load_button": {
+      "en": "Load",
+      "uk": "Завантажити"
+    },
+    "pause_settings_button": {
+      "en": "Settings",
+      "uk": "Налаштування"
+    },
+    "pause_quit_button": {
+      "en": "Quit Game",
+      "uk": "Вийти з гри"
+    },
+    "pause_back_button": {
+      "en": "Back",
+      "uk": "Назад"
+    },
+    "save_playtime": {
+      "en": "<hours>h <minutes>m",
+      "uk": "<hours> год <minutes> хв"
+    },
+    "save_autosave": {
+      "en": "Autosave",
+      "uk": "Автозбереження"
+    },
+    "save_slot_1": {
+      "en": "Slot 1",
+      "uk": "Слот 1"
+    },
+    "save_slot_2": {
+      "en": "Slot 2",
+      "uk": "Слот 2"
+    },
+    "save_slot_3": {
+      "en": "Slot 3",
+      "uk": "Слот 3"
+    },
+    "save_no_data": {
+      "en": "No Data",
+      "uk": "Немає даних"
+    },
+    "save_confirm_button": {
+      "en": "Confirm",
+      "uk": "Підтвердити"
+    },
+    "save_cancel_button": {
+      "en": "Cancel",
+      "uk": "Скасувати"
+    },
+    "save_back_button": {
+      "en": "Back",
+      "uk": "Назад"
+    },
+    "save_confirm_heading": {
+      "en": "Save over <slot>?",
+      "uk": "Перезаписати <slot>?"
+    },
+    "load_delete_autosave": {
+      "en": "Delete<br>Autosave",
+      "uk": "Видалити<br>автозбереження"
+    },
+    "load_delete_slot_1": {
+      "en": "Delete<br>Save 1",
+      "uk": "Видалити<br>збереження 1"
+    },
+    "load_delete_slot_2": {
+      "en": "Delete<br>Save 2",
+      "uk": "Видалити<br>збереження 2"
+    },
+    "load_delete_slot_3": {
+      "en": "Delete<br>Save 3",
+      "uk": "Видалити<br>збереження 3"
+    },
+    "load_confirm_heading": {
+      "en": "Load <slot>?",
+      "uk": "Завантажити <slot>?"
+    },
+    "load_confirm_delete_button": {
+      "en": "Delete",
+      "uk": "Видалити"
+    },
+    "load_delete_heading": {
+      "en": "Delete <slot>?",
+      "uk": "Видалити <slot>?"
+    },
+    "load_confirm_button": {
+      "en": "Confirm",
+      "uk": "Підтвердити"
+    },
+    "load_cancel_button": {
+      "en": "Cancel",
+      "uk": "Скасувати"
+    },
+    "load_back_button": {
+      "en": "Back",
+      "uk": "Назад"
+    },
+    "dead_continue": {
+      "en": "Continue",
+      "uk": "Продовжити"
+    },
+    "dead_quit": {
+      "en": "Quit",
+      "uk": "Вихід"
+    },
+    "stats_results": {
+      "en": "Results",
+      "uk": "Результати"
+    },
+    "stats_rank": {
+      "en": "Rank",
+      "uk": "Ранг"
+    },
+    "stats_time": {
+      "en": "Time:",
+      "uk": "Час:"
+    },
+    "stats_accuracy": {
+      "en": "Accuracy:",
+      "uk": "Точність:"
+    },
+    "stats_perfect_combos": {
+      "en": "Perfect Combos:",
+      "uk": "Ідеальні комбо:"
+    },
+    "stats_hearts_broken": {
+      "en": "Hearts Broken:",
+      "uk": "Розбитих сердець:"
+    },
+    "stats_weapon_of_choice": {
+      "en": "Weapon of Choice:",
+      "uk": "Улюблена зброя:"
+    },
+    "stats_deaths": {
+      "en": "Deaths:",
+      "uk": "Смертей:"
+    },
+    "stats_artifacts_collected": {
+      "en": "Artifacts Collected:",
+      "uk": "Зібрано артефактів:"
+    },
+    "stats_critters_crushed": {
+      "en": "Critters Crushed:",
+      "uk": "Розчавлених тварюк:"
+    },
+    "stats_water_consumed": {
+      "en": "Water Consumed:",
+      "uk": "Випито води:"
+    },
+    "stats_healthpack_unit_single": {
+      "en": "bottle",
+      "uk": "пляшка"
+    },
+    "stats_healthpack_unit_plural": {
+      "en": "bottles",
+      "uk": "пляшок"
+    },
+    "stats_continue_prompt": {
+      "en": "Continue",
+      "uk": "Продовжити"
+    },
+    "shop_sell_heading": {
+      "en": "Sell Artifacts",
+      "uk": "Продати артефакти"
+    },
+    "shop_buy_heading": {
+      "en": "Buy Upgrades",
+      "uk": "Купити покращення"
+    },
+    "shop_sell_item": {
+      "en": "Sell",
+      "uk": "Продати"
+    },
+    "shop_item_sold": {
+      "en": "Sold",
+      "uk": "Продано"
+    },
+    "shop_buy_item": {
+      "en": "Buy",
+      "uk": "Купити"
+    },
+    "shop_item_unavailable": {
+      "en": "Locked",
+      "uk": "Заблоковано"
+    },
+    "shop_item_purchased": {
+      "en": "Owned",
+      "uk": "У власності"
+    },
+    "shop_item_requirement": {
+      "en": "Requires",
+      "uk": "Потрібно"
+    },
+    "shop_back_button": {
+      "en": "Back",
+      "uk": "Назад"
+    },
+    "currency_single": {
+      "en": "Yowza",
+      "uk": "Яуза"
+    },
+    "currency_plural": {
+      "en": "Yowzas",
+      "uk": "Яузи"
+    },
+    "shop_currency": {
+      "en": "Yowzas",
+      "uk": "Яузи"
+    },
+    "inventory_tab": {
+      "en": "Inventory",
+      "uk": "Інвентар"
+    },
+    "inventory_equipment_tab": {
+      "en": "Equipment",
+      "uk": "Екіпірування"
+    },
+    "inventory_collection_tab": {
+      "en": "Collection",
+      "uk": "Колекція"
+    },
+    "inventory_logbook_tab": {
+      "en": "Logbook",
+      "uk": "Журнал"
+    },
+    "inventory_recovery_subheading": {
+      "en": "Recovery Items",
+      "uk": "Відновлювальні предмети"
+    },
+    "inventory_items_subheading": {
+      "en": "Items",
+      "uk": "Предмети"
+    },
+    "inventory_equipment_subheading": {
+      "en": "Equipment",
+      "uk": "Екіпірування"
+    },
+    "inventory_upgrades_subheading": {
+      "en": "Upgrades",
+      "uk": "Покращення"
+    },
+    "inventory_key_items_subheading": {
+      "en": "Key Items",
+      "uk": "Ключові предмети"
+    },
+    "inventory_artifacts_subheading": {
+      "en": "Artifacts",
+      "uk": "Артефакти"
+    },
+    "inventory_use_item": {
+      "en": "Use",
+      "uk": "Використати"
+    },
+    "inventory_heal": {
+      "en": "Heal",
+      "uk": "Зцілитися"
+    },
+    "inventory_equip": {
+      "en": "Equip",
+      "uk": "Екіпірувати"
+    },
+    "inventory_item_sold": {
+      "en": "Sold",
+      "uk": "Продано"
+    },
+    "inventory_open_logbook": {
+      "en": "Open Logbook",
+      "uk": "Відкрити журнал"
+    },
+    "inventory_back_button": {
+      "en": "Back",
+      "uk": "Назад"
+    },
+    "logbook_entries_heading": {
+      "en": "Logbook Entries",
+      "uk": "Записи журналу"
+    },
+    "logbook_day_0": {
+      "en": "Prologue",
+      "uk": "Пролог"
+    },
+    "logbook_day_1": {
+      "en": "Day 1",
+      "uk": "День 1"
+    },
+    "logbook_day_2": {
+      "en": "Day 2",
+      "uk": "День 2"
+    },
+    "logbook_day_3": {
+      "en": "Day 3",
+      "uk": "День 3"
+    },
+    "logbook_day_4": {
+      "en": "Finale",
+      "uk": "Фінал"
+    },
+    "logbook_day_x": {
+      "en": "Epilogue",
+      "uk": "Епілог"
+    },
+    "announce_day_1": {
+      "en": "Day 1",
+      "uk": "День 1"
+    },
+    "announce_day_2": {
+      "en": "Day 2",
+      "uk": "День 2"
+    },
+    "announce_day_3": {
+      "en": "Day 3",
+      "uk": "День 3"
+    },
+    "announce_day_4": {
+      "en": "Finale",
+      "uk": "Фінал"
+    },
+    "announce_end": {
+      "en": "Two Weeks Later",
+      "uk": "Два тижні потому"
+    },
+    "start_time_attack_button": {
+      "en": "Time Attack",
+      "uk": "Гра на час"
+    },
+    "ngp_heading": {
+      "en": "New Game+",
+      "uk": "Нова гра+"
+    },
+    "ngp_description": {
+      "en": "Start the game from the beginning with your current Artifacts, Upgrades and Yowzas?",
+      "uk": "Почати гру з початку з поточними артефактами, покращеннями та яузами?"
+    },
+    "ngp_note": {
+      "en": "New Game+ is only available to select on this screen.",
+      "uk": "Нову гру+ можна обрати лише на цьому екрані."
+    },
+    "ngp_start_button": {
+      "en": "Start New Game+",
+      "uk": "Почати нову гру+"
+    },
+    "ngp_quit_button": {
+      "en": "Quit Game",
+      "uk": "Вийти з гри"
+    },
+    "difficulty_heading": {
+      "en": "Difficulty",
+      "uk": "Складність"
+    },
+    "difficulty_note": {
+      "en": "Difficulty can be changed at any time during gameplay along with other comfort options in the Accessibility Settings menu.",
+      "uk": "Складність можна змінити будь-коли під час гри, як і інші параметри комфорту в меню налаштувань доступності."
+    },
+    "difficulty_info_easy": {
+      "en": "You are stronger, enemies are weaker.",
+      "uk": "Ви сильніші, вороги слабші."
+    },
+    "difficulty_info_normal": {
+      "en": "The intended experience.",
+      "uk": "Задуманий досвід."
+    },
+    "difficulty_info_hard": {
+      "en": "You are weaker, enemies are stronger.",
+      "uk": "Ви слабші, вороги сильніші."
+    },
+    "difficulty_button_easy": {
+      "en": "Easy",
+      "uk": "Легка"
+    },
+    "difficulty_button_normal": {
+      "en": "Normal",
+      "uk": "Звичайна"
+    },
+    "difficulty_button_hard": {
+      "en": "Hard",
+      "uk": "Складна"
+    },
+    "time_attack_heading": {
+      "en": "Time Attack",
+      "uk": "Гра на час"
+    },
+    "time_attack_description": {
+      "en": "Replay combat levels to improve your time and rank. No upgrades, no saves, it’s you against the clock.",
+      "uk": "Перегравайте бойові рівні, щоб покращити свій час і ранг. Без покращень, без збережень — лише ви і секундомір."
+    },
+    "time_attack_best_time": {
+      "en": "Best Time:",
+      "uk": "Найкращий час:"
+    },
+    "time_attack_best_rank": {
+      "en": "Best Rank:",
+      "uk": "Найкращий ранг:"
+    },
+    "time_attack_no_score": {
+      "en": "No Data",
+      "uk": "Немає даних"
+    },
+    "time_attack_checkpoint_indicator": {
+      "en": "Checkpoint",
+      "uk": "Контрольна точка"
+    },
+    "time_attack_timer": {
+      "en": "Timer",
+      "uk": "Таймер"
+    },
+    "time_attack_splash_header": {
+      "en": "Time Attack Unlocked",
+      "uk": "Режим «Гра на час» відкрито"
+    },
+    "time_attack_splash_prompt": {
+      "en": "Time Attack is now available on the main menu.",
+      "uk": "Режим «Гра на час» тепер доступний у головному меню."
+    },
+    "time_attack_splash_description": {
+      "en": "Replay combat levels to improve your time and rank. No upgrades, no saves, it’s you against the clock.",
+      "uk": "Перегравайте бойові рівні, щоб покращити свій час і ранг. Без покращень, без збережень — лише ви і секундомір."
+    },
+    "time_attack_splash_continue": {
+      "en": "Continue",
+      "uk": "Продовжити"
+    }
+  },
+  "Prompts": {
+    "prompt_check": {
+      "en": "Check",
+      "uk": "Перевірити"
+    },
+    "prompt_examine": {
+      "en": "Examine",
+      "uk": "Роздивитися"
+    },
+    "prompt_talk": {
+      "en": "Talk",
+      "uk": "Поговорити"
+    },
+    "prompt_listen": {
+      "en": "Listen",
+      "uk": "Послухати"
+    },
+    "prompt_unknown": {
+      "en": "???",
+      "uk": "???"
+    },
+    "prompt_enter": {
+      "en": "Enter",
+      "uk": "Увійти"
+    },
+    "prompt_leave": {
+      "en": "Leave",
+      "uk": "Вийти"
+    },
+    "prompt_open": {
+      "en": "Open",
+      "uk": "Відкрити"
+    },
+    "prompt_close": {
+      "en": "Close",
+      "uk": "Закрити"
+    },
+    "prompt_use_elevator": {
+      "en": "Use Elevator",
+      "uk": "Скористатися ліфтом"
+    },
+    "prompt_drink": {
+      "en": "Drink",
+      "uk": "Випити"
+    },
+    "prompt_go_upstairs": {
+      "en": "Go Upstairs",
+      "uk": "Піднятися нагору"
+    },
+    "prompt_go_downstairs": {
+      "en": "Go Downstairs",
+      "uk": "Спуститися вниз"
+    },
+    "prompt_sleep": {
+      "en": "Sleep",
+      "uk": "Поспати"
+    },
+    "prompt_use": {
+      "en": "Use",
+      "uk": "Використати"
+    },
+    "prompt_blank": {
+      "en": "",
+      "uk": ""
+    },
+    "prompt_pickup": {
+      "en": "Pick Up",
+      "uk": "Підібрати"
+    },
+    "prompt_climb_down": {
+      "en": "Climb Down",
+      "uk": "Спуститися"
+    },
+    "prompt_climb_up": {
+      "en": "Climb Up",
+      "uk": "Піднятися"
+    },
+    "prompt_look": {
+      "en": "Look",
+      "uk": "Подивитися"
+    },
+    "prompt_read": {
+      "en": "Read",
+      "uk": "Прочитати"
+    },
+    "prompt_sit": {
+      "en": "Sit",
+      "uk": "Сісти"
+    },
+    "prompt_crawl_under": {
+      "en": "Crawl Under",
+      "uk": "Пролізти під"
+    },
+    "prompt_get_on": {
+      "en": "Get On",
+      "uk": "Сісти"
+    },
+    "prompt_get_off": {
+      "en": "Get Off",
+      "uk": "Злізти"
+    },
+    "prompt_inventory": {
+      "en": "Inventory",
+      "uk": "Інвентар"
+    },
+    "prompt_climb_over": {
+      "en": "Climb Over",
+      "uk": "Перелізти"
+    }
+  },
+  "Settings Menu": {
+    "button_back": {
+      "en": "Back",
+      "uk": "Назад"
+    },
+    "button_reset_all": {
+      "en": "Reset All",
+      "uk": "Скинути все"
+    },
+    "button_reset": {
+      "en": "Reset",
+      "uk": "Скинути"
+    },
+    "menu_button_controls": {
+      "en": "Controls",
+      "uk": "Керування"
+    },
+    "menu_button_gameplay": {
+      "en": "Gameplay",
+      "uk": "Геймплей"
+    },
+    "menu_button_accessibility": {
+      "en": "Accessibility",
+      "uk": "Доступність"
+    },
+    "menu_button_mouse": {
+      "en": "Mouse",
+      "uk": "Миша"
+    },
+    "menu_button_gamepad": {
+      "en": "Controller",
+      "uk": "Контролер"
+    },
+    "menu_button_audio": {
+      "en": "Audio",
+      "uk": "Звук"
+    },
+    "menu_button_video": {
+      "en": "Video",
+      "uk": "Відео"
+    },
+    "menu_button_language": {
+      "en": "Language",
+      "uk": "Мова"
+    },
+    "video_heading": {
+      "en": "Video Settings",
+      "uk": "Налаштування відео"
+    },
+    "video_window_mode_label": {
+      "en": "Window Mode",
+      "uk": "Режим вікна"
+    },
+    "video_window_mode_option_borderless": {
+      "en": "Borderless Fullscreen",
+      "uk": "Повноекранний без рамок"
+    },
+    "video_window_mode_option_fullscreen": {
+      "en": "Fullscreen",
+      "uk": "Повноекранний"
+    },
+    "video_window_mode_option_windowed": {
+      "en": "Windowed",
+      "uk": "У вікні"
+    },
+    "video_ui_resolution_label": {
+      "en": "UI Resolution",
+      "uk": "Роздільність інтерфейсу"
+    },
+    "video_game_resolution_label": {
+      "en": "Game Resolution",
+      "uk": "Роздільність гри"
+    },
+    "video_brightness_label": {
+      "en": "Brightness",
+      "uk": "Яскравість"
+    },
+    "video_vsync_label": {
+      "en": "V Sync",
+      "uk": "Вертикальна синхронізація"
+    },
+    "video_vsync_option_on": {
+      "en": "On",
+      "uk": "Увімк."
+    },
+    "video_vsync_option_off": {
+      "en": "Off",
+      "uk": "Вимк."
+    },
+    "video_fps_limit_label": {
+      "en": "FPS Limit",
+      "uk": "Обмеження FPS"
+    },
+    "video_fps_limit_option_unlimited": {
+      "en": "Unlimited",
+      "uk": "Без обмежень"
+    },
+    "video_fps_limit_option_30": {
+      "en": "30",
+      "uk": "30"
+    },
+    "video_fps_limit_option_60": {
+      "en": "60",
+      "uk": "60"
+    },
+    "video_fps_limit_option_120": {
+      "en": "120",
+      "uk": "120"
+    },
+    "video_fps_limit_option_144": {
+      "en": "144",
+      "uk": "144"
+    },
+    "keyboard_heading": {
+      "en": "Mouse Settings",
+      "uk": "Налаштування миші"
+    },
+    "keyboard_invert_vertical_look_label": {
+      "en": "Invert Vertical Look",
+      "uk": "Інвертувати вертикальний огляд"
+    },
+    "keyboard_invert_horizontal_look_label": {
+      "en": "Invert Horizontal Look",
+      "uk": "Інвертувати горизонтальний огляд"
+    },
+    "keyboard_vertical_look_sensitivity_label": {
+      "en": "Vertical Look Sensitivity",
+      "uk": "Чутливість вертикального огляду"
+    },
+    "keyboard_horizontal_look_sensitivity_label": {
+      "en": "Horizontal Look Sensitivity",
+      "uk": "Чутливість горизонтального огляду"
+    },
+    "gamepad_heading": {
+      "en": "Controller Settings",
+      "uk": "Налаштування контролера"
+    },
+    "gamepad_invert_vertical_look_label": {
+      "en": "Invert Vertical Look",
+      "uk": "Інвертувати вертикальний огляд"
+    },
+    "gamepad_invert_horizontal_look_label": {
+      "en": "Invert Horizontal Look",
+      "uk": "Інвертувати горизонтальний огляд"
+    },
+    "gamepad_vertical_look_sensitivity_label": {
+      "en": "Vertical Look Sensitivity",
+      "uk": "Чутливість вертикального огляду"
+    },
+    "gamepad_horizontal_look_sensitivity_label": {
+      "en": "Horizontal Look Sensitivity",
+      "uk": "Чутливість горизонтального огляду"
+    },
+    "gamepad_rumble_label": {
+      "en": "Vibration",
+      "uk": "Вібрація"
+    },
+    "gamepad_gyro_label": {
+      "en": "Gyroscope Aiming",
+      "uk": "Прицілювання гіроскопом"
+    },
+    "gamepad_gyro_sensitivity_label": {
+      "en": "Gyroscope Sensitivity",
+      "uk": "Чутливість гіроскопа"
+    },
+    "language_heading": {
+      "en": "Language Settings",
+      "uk": "Налаштування мови"
+    },
+    "language_label": {
+      "en": "Language",
+      "uk": "Мова"
+    },
+    "language_option_en": {
+      "en": "English",
+      "uk": "Англійська"
+    },
+    "language_option_fr": {
+      "en": "French",
+      "uk": "Французька"
+    },
+    "language_option_es": {
+      "en": "Spanish",
+      "uk": "Іспанська"
+    },
+    "language_option_jp": {
+      "en": "Japanese",
+      "uk": "Японська"
+    },
+    "language_option_sc": {
+      "en": "Simplified Chinese",
+      "uk": "Спрощена китайська"
+    },
+    "language_option_tc": {
+      "en": "Traditional Chinese",
+      "uk": "Традиційна китайська"
+    },
+    "audio_heading": {
+      "en": "Audio Settings",
+      "uk": "Налаштування звуку"
+    },
+    "audio_master_volume_label": {
+      "en": "Master Volume",
+      "uk": "Загальна гучність"
+    },
+    "audio_sound_volume_label": {
+      "en": "SFX Volume",
+      "uk": "Гучність звукових ефектів"
+    },
+    "audio_music_volume_label": {
+      "en": "Music Volume",
+      "uk": "Гучність музики"
+    },
+    "audio_mono_audio_label": {
+      "en": "Mono Audio",
+      "uk": "Монозвук"
+    },
+    "accessibility_heading": {
+      "en": "Accessibility Settings",
+      "uk": "Налаштування доступності"
+    },
+    "accessibility_controls_subheading": {
+      "en": "Controls",
+      "uk": "Керування"
+    },
+    "accessibility_combat_subheading": {
+      "en": "Combat",
+      "uk": "Бій"
+    },
+    "accessibility_comfort_subheading": {
+      "en": "Comfort",
+      "uk": "Комфорт"
+    },
+    "accessibility_aim_mode_label": {
+      "en": "Aim Mode",
+      "uk": "Режим прицілювання"
+    },
+    "accessibility_aim_mode_description": {
+      "en": "Hold: Press and hold <Action>toggleView</Action> “Aim” to look in first person.<br>Toggle: Press <Action>toggleView</Action> “Aim” to toggle between first and third person.",
+      "uk": "Утримання: натисніть і утримуйте <Action>toggleView</Action> «Прицілювання», щоб дивитися від першої особи.<br>Перемикання: натисніть <Action>toggleView</Action> «Прицілювання», щоб перемикатися між першою та третьою особою."
+    },
+    "accessibility_aim_mode_option_hold": {
+      "en": "Hold",
+      "uk": "Утримання"
+    },
+    "accessibility_aim_mode_option_toggle": {
+      "en": "Toggle",
+      "uk": "Перемикання"
+    },
+    "accessibility_run_mode_label": {
+      "en": "Run Mode",
+      "uk": "Режим бігу"
+    },
+    "accessibility_run_mode_description": {
+      "en": "Hold: Press and hold <Action>sprint</Action> “Run” to run.<br>Toggle: Press <Action>sprint</Action> “Run” to toggle between walk and run.",
+      "uk": "Утримання: натисніть і утримуйте <Action>sprint</Action> «Біг», щоб бігти.<br>Перемикання: натисніть <Action>sprint</Action> «Біг», щоб перемикатися між ходьбою та бігом."
+    },
+    "accessibility_run_mode_option_hold": {
+      "en": "Hold",
+      "uk": "Утримання"
+    },
+    "accessibility_run_mode_option_toggle": {
+      "en": "Toggle",
+      "uk": "Перемикання"
+    },
+    "accessibility_control_hints_label": {
+      "en": "Control Hints",
+      "uk": "Підказки керування"
+    },
+    "accessibility_control_hints_description": {
+      "en": "Display control hints on screen when you gain new abilities or weapons.",
+      "uk": "Показувати на екрані підказки керування, коли ви отримуєте нові здібності чи зброю."
+    },
+    "accessibility_difficulty_label": {
+      "en": "Difficulty",
+      "uk": "Складність"
+    },
+    "accessibility_difficulty_description": {
+      "en": "Easy: Michelle is stronger, enemies are weaker.<br>Normal: The intended difficulty level.<br>Hard: Michelle is weaker, enemies are stronger.",
+      "uk": "Легка: Мішель сильніша, вороги слабші.<br>Звичайна: задуманий рівень складності.<br>Складна: Мішель слабша, вороги сильніші."
+    },
+    "accessibility_difficulty_option_easy": {
+      "en": "Easy",
+      "uk": "Легка"
+    },
+    "accessibility_difficulty_option_normal": {
+      "en": "Normal",
+      "uk": "Звичайна"
+    },
+    "accessibility_difficulty_option_hard": {
+      "en": "Hard",
+      "uk": "Складна"
+    },
+    "accessibility_aim_assist_label": {
+      "en": "Weak Point Aim Assist",
+      "uk": "Допомога в прицілюванні у вразливі місця"
+    },
+    "accessibility_aim_assist_description": {
+      "en": "When aiming near an enemy weak point the reticule will move towards the target.",
+      "uk": "Коли ви прицілюєтеся поблизу вразливого місця ворога, приціл зміщується до цілі."
+    },
+    "accessibility_lock_on_label": {
+      "en": "Enemy Lock On",
+      "uk": "Захоплення ворога"
+    },
+    "accessibility_lock_on_description": {
+      "en": "The closest enemy will be highlighted on screen in third person view. Press <Action>toggleView</Action> “Aim” to automatically rotate towards the closest enemy when entering first person view.",
+      "uk": "Найближчий ворог підсвічується на екрані у вигляді від третьої особи. Натисніть <Action>toggleView</Action> «Прицілювання», щоб автоматично повернутися до найближчого ворога, переходячи у вигляд від першої особи."
+    },
+    "accessibility_radar_label": {
+      "en": "Enemy Radar",
+      "uk": "Радар ворогів"
+    },
+    "accessibility_radar_description": {
+      "en": "Display an on-screen radar that hints at the location of enemies in the room. The centre ring will flash when an enemy is in pursuit.",
+      "uk": "Показувати на екрані радар, який вказує на місцезнаходження ворогів у кімнаті. Центральне кільце блимає, коли ворог переслідує вас."
+    },
+    "accessibility_damage_numbers_label": {
+      "en": "Damage Numbers",
+      "uk": "Числа шкоди"
+    },
+    "accessibility_damage_numbers_description": {
+      "en": "Display the amount of damage inflicted on an enemy when they are hit.",
+      "uk": "Показувати кількість шкоди, завданої ворогові під час влучання."
+    },
+    "accessibility_auto_equip_label": {
+      "en": "Auto Equip Weapon",
+      "uk": "Автоматично споряджати зброю"
+    },
+    "accessibility_auto_equip_description": {
+      "en": "Automatically equip a weapon when pressing <Action>toggleView</Action> “Aim” to enter first person.",
+      "uk": "Автоматично споряджати зброю при натисканні <Action>toggleView</Action> «Прицілювання» для переходу у вигляд від першої особи."
+    },
+    "accessibility_captions_label": {
+      "en": "SFX Captions",
+      "uk": "Субтитри звуків"
+    },
+    "accessibility_captions_description": {
+      "en": "Enable captions for important character and environmental sound effects.",
+      "uk": "Увімкнути субтитри для важливих звуків персонажів і довкілля."
+    },
+    "accessibility_autosave_label": {
+      "en": "Autosave",
+      "uk": "Автозбереження"
+    },
+    "accessibility_autosave_description": {
+      "en": "Enable autosaves which occur after certain combat sequences, cutscenes and puzzles.",
+      "uk": "Увімкнути автозбереження, які відбуваються після певних бойових послідовностей, катсцен і головоломок."
+    },
+    "accessibility_camera_sway_label": {
+      "en": "Camera Sway",
+      "uk": "Похитування камери"
+    },
+    "accessibility_camera_sway_description": {
+      "en": "Enable passive camera movement in first and third person.",
+      "uk": "Увімкнути пасивний рух камери від першої та третьої особи."
+    },
+    "accessibility_typewriter_label": {
+      "en": "Typewriter Effect",
+      "uk": "Ефект друкарської машинки"
+    },
+    "accessibility_typewriter_description": {
+      "en": "Enable the typewriter effect for displaying dialogue.",
+      "uk": "Увімкнути ефект друкарської машинки для відображення діалогів."
+    },
+    "accessibility_fov_label": {
+      "en": "First Person FOV",
+      "uk": "Кут огляду від першої особи"
+    },
+    "accessibility_fov_description": {
+      "en": "Adjust the field of view for aiming in first person.",
+      "uk": "Налаштувати кут огляду для прицілювання від першої особи."
+    },
+    "controls_heading": {
+      "en": "Controls",
+      "uk": "Керування"
+    },
+    "controls_movement_style_label": {
+      "en": "Movement Style",
+      "uk": "Стиль руху"
+    },
+    "controls_movement_style_option_modern": {
+      "en": "Modern",
+      "uk": "Сучасний"
+    },
+    "controls_movement_style_option_tank": {
+      "en": "Tank Controls",
+      "uk": "Танкове керування"
+    },
+    "controls_customisation_subheading": {
+      "en": "Customisation",
+      "uk": "Персоналізація"
+    },
+    "controls_keyboard_remapping_button": {
+      "en": "Keyboard Remapping",
+      "uk": "Перепризначення клавіш"
+    },
+    "controls_gamepad_remapping_button": {
+      "en": "Controller Remapping",
+      "uk": "Перепризначення кнопок контролера"
+    },
+    "controls_menu_controls_subheading": {
+      "en": "Menu Controls",
+      "uk": "Керування меню"
+    },
+    "controls_game_controls_subheading": {
+      "en": "Game Controls",
+      "uk": "Керування грою"
+    },
+    "controls_aiming_controls_subheading": {
+      "en": "Aiming Controls",
+      "uk": "Керування прицілюванням"
+    },
+    "controls_input_ui_pause": {
+      "en": "Pause",
+      "uk": "Пауза"
+    },
+    "controls_input_ui_inventory": {
+      "en": "Inventory",
+      "uk": "Інвентар"
+    },
+    "controls_input_ui_confirm": {
+      "en": "Confirm",
+      "uk": "Підтвердити"
+    },
+    "controls_input_ui_cancel": {
+      "en": "Cancel",
+      "uk": "Скасувати"
+    },
+    "controls_input_ui_up": {
+      "en": "Up",
+      "uk": "Вгору"
+    },
+    "controls_input_ui_down": {
+      "en": "Down",
+      "uk": "Вниз"
+    },
+    "controls_input_ui_left": {
+      "en": "Left",
+      "uk": "Вліво"
+    },
+    "controls_input_ui_right": {
+      "en": "Right",
+      "uk": "Вправо"
+    },
+    "controls_input_move_up": {
+      "en": "Move Up",
+      "uk": "Рух угору"
+    },
+    "controls_input_move_down": {
+      "en": "Move Down",
+      "uk": "Рух униз"
+    },
+    "controls_input_move_left": {
+      "en": "Move Left",
+      "uk": "Рух вліво"
+    },
+    "controls_input_move_right": {
+      "en": "Move Right",
+      "uk": "Рух вправо"
+    },
+    "controls_input_run": {
+      "en": "Run",
+      "uk": "Біг"
+    },
+    "controls_input_interact": {
+      "en": "Interact",
+      "uk": "Взаємодія"
+    },
+    "controls_input_third_eye": {
+      "en": "Third Eye",
+      "uk": "Третє око"
+    },
+    "controls_input_aim": {
+      "en": "Aim",
+      "uk": "Прицілювання"
+    },
+    "controls_input_fire": {
+      "en": "Fire",
+      "uk": "Постріл"
+    },
+    "controls_input_reload": {
+      "en": "Reload",
+      "uk": "Перезаряджання"
+    },
+    "controls_input_lower_weapon": {
+      "en": "Lower Weapon",
+      "uk": "Опустити зброю"
+    },
+    "controls_input_axe": {
+      "en": "Axe",
+      "uk": "Сокира"
+    },
+    "controls_input_pistol": {
+      "en": "Pistol",
+      "uk": "Пістолет"
+    },
+    "controls_input_shotgun": {
+      "en": "Shotgun",
+      "uk": "Дробовик"
+    },
+    "controls_input_heartbreak": {
+      "en": "Heartbreak",
+      "uk": "Серцеїд"
+    },
+    "controls_input_quick_turn": {
+      "en": "Quick Turn",
+      "uk": "Швидкий розворот"
+    },
+    "controls_input_look": {
+      "en": "Look",
+      "uk": "Огляд"
+    },
+    "controls_keyboard_heading": {
+      "en": "Keyboard Remapping",
+      "uk": "Перепризначення клавіш"
+    },
+    "controls_keyboard_presets_label": {
+      "en": "Presets",
+      "uk": "Пресети"
+    },
+    "controls_keyboard_presets_option_wasd": {
+      "en": "WASD Movement",
+      "uk": "Рух WASD"
+    },
+    "controls_keyboard_presets_option_zqsd": {
+      "en": "ZQSD Movement",
+      "uk": "Рух ZQSD"
+    },
+    "controls_keyboard_presets_option_arrows": {
+      "en": "Arrow Key Movement",
+      "uk": "Рух стрілками"
+    },
+    "controls_keyboard_presets_option_custom": {
+      "en": "Custom Movement",
+      "uk": "Власний рух"
+    },
+    "controls_keyboard_remapping_subheading": {
+      "en": "Remapping",
+      "uk": "Перепризначення"
+    },
+    "controls_keyboard_remapping_prompt": {
+      "en": "Press the button to use for this action.",
+      "uk": "Натисніть кнопку, яку потрібно призначити для цієї дії."
+    },
+    "controls_gamepad_heading": {
+      "en": "Controller Remapping",
+      "uk": "Перепризначення кнопок контролера"
+    },
+    "controls_gamepad_presets_label": {
+      "en": "Presets",
+      "uk": "Пресети"
+    },
+    "controls_gamepad_presets_option_lstick": {
+      "en": "Left Stick Movement",
+      "uk": "Рух лівим стіком"
+    },
+    "controls_gamepad_presets_option_dpad": {
+      "en": "Directional Button Movement",
+      "uk": "Рух кнопками напрямку"
+    },
+    "controls_gamepad_presets_option_custom": {
+      "en": "Custom Movement",
+      "uk": "Власний рух"
+    },
+    "controls_gamepad_aiming_label": {
+      "en": "Aiming Control",
+      "uk": "Керування прицілюванням"
+    },
+    "controls_gamepad_aiming_option_rstick": {
+      "en": "Right Stick Aiming",
+      "uk": "Прицілювання правим стіком"
+    },
+    "controls_gamepad_aiming_option_lstick": {
+      "en": "Left Stick Aiming",
+      "uk": "Прицілювання лівим стіком"
+    },
+    "controls_gamepad_remapping_subheading": {
+      "en": "Remapping",
+      "uk": "Перепризначення"
+    },
+    "controls_gamepad_remapping_prompt": {
+      "en": "Press the button to use for this action.",
+      "uk": "Натисніть кнопку, яку потрібно призначити для цієї дії."
+    },
+    "accessibility_hold_to_fire_label": {
+      "en": "Hold To Fire",
+      "uk": "Утримання для стрільби"
+    },
+    "accessibility_hold_to_fire_description": {
+      "en": "While aiming, press and hold <Action>fireWeapon</Action> “Fire” to attack continuously.",
+      "uk": "Під час прицілювання натисніть і утримуйте <Action>fireWeapon</Action> «Постріл», щоб атакувати безперервно."
+    },
+    "audio_typewriter_volume_label": {
+      "en": "Dialogue Typewriter Volume",
+      "uk": "Гучність друкарської машинки в діалогах"
+    },
+    "accessibility_weakpoint_stickiness_label": {
+      "en": "Weak Point Stickiness",
+      "uk": "Прилипання до вразливих місць"
+    },
+    "accessibility_weakpoint_stickiness_description": {
+      "en": "Adjusts how strongly the reticule clings to weak points while aiming over them.",
+      "uk": "Регулює, наскільки сильно приціл чіпляється за вразливі місця під час прицілювання по них."
+    },
+    "accessibility_healing_label": {
+      "en": "Water of Life",
+      "uk": "Вода життя"
+    },
+    "accessibility_healing_description": {
+      "en": "Add a permanent water bottle to Michelle’s inventory to allow healing at any time.",
+      "uk": "Додати постійну пляшку води до інвентаря Мішель, щоб мати змогу зцілюватися будь-коли."
+    },
+    "menu_button_controller": {
+      "en": "Controller",
+      "uk": "Контролер"
+    },
+    "controls_controller_heading": {
+      "en": "Controller Remapping",
+      "uk": "Перепризначення кнопок контролера"
+    },
+    "controller_heading": {
+      "en": "Controller Settings",
+      "uk": "Налаштування контролера"
+    },
+    "controls_controller_remapping_button": {
+      "en": "Controller Remapping",
+      "uk": "Перепризначення кнопок контролера"
+    },
+    "gamepad_vibration_label": {
+      "en": "Vibration",
+      "uk": "Вібрація"
+    },
+    "keyboard_heading_alt": {
+      "en": "Keyboard Settings",
+      "uk": "Налаштування клавіатури"
+    },
+    "keyboard_heading_alt2": {
+      "en": "Keyboard",
+      "uk": "Клавіатура"
+    },
+    "controls_keyboard_layout_label": {
+      "en": "Keyboard Layout",
+      "uk": "Розкладка клавіатури"
+    },
+    "controls_keyboard_layout_option_qwerty": {
+      "en": "QWERTY",
+      "uk": "QWERTY"
+    },
+    "controls_keyboard_layout_option_azerty": {
+      "en": "AZERTY",
+      "uk": "AZERTY"
+    },
+    "controls_gamepad_presets_option_lstick_switch": {
+      "en": "Left Stick Movement",
+      "uk": "Рух лівим стіком"
+    },
+    "controls_gamepad_presets_option_dpad_switch": {
+      "en": "Directional Buttons Movement",
+      "uk": "Рух кнопками напрямку"
+    },
+    "controls_gamepad_aiming_option_rstick_switch": {
+      "en": "Right Stick Aiming",
+      "uk": "Прицілювання правим стіком"
+    },
+    "controls_gamepad_aiming_option_lstick_switch": {
+      "en": "Left Stick Aiming",
+      "uk": "Прицілювання лівим стіком"
+    },
+    "gamepad_gyro_label_ps": {
+      "en": "Motion Sensor Function Aiming",
+      "uk": "Прицілювання датчиком руху"
+    },
+    "gamepad_gyro_sensitivity_label_ps": {
+      "en": "Motion Sensor Function Sensitivity",
+      "uk": "Чутливість датчика руху"
+    },
+    "accessibility_instant_aim_label": {
+      "en": "Instant Aiming",
+      "uk": "Миттєве прицілювання"
+    },
+    "accessibility_instant_aim_description": {
+      "en": "The camera will change to first person view without delay when pressing the <Action>toggleView</Action> “Aim” button.",
+      "uk": "Камера переходить у вигляд від першої особи без затримки при натисканні кнопки <Action>toggleView</Action> «Прицілювання»."
+    },
+    "language_option_uk": {
+      "en": "Українська",
+      "uk": "Українська"
+    }
+  },
+  "UI Prompts": {
+    "walk": {
+      "en": "Walk",
+      "uk": "Ходьба"
+    },
+    "run": {
+      "en": "Run",
+      "uk": "Біг"
+    },
+    "look": {
+      "en": "Look",
+      "uk": "Огляд"
+    },
+    "inventory": {
+      "en": "Inventory",
+      "uk": "Інвентар"
+    },
+    "third_eye": {
+      "en": "Third Eye",
+      "uk": "Третє око"
+    },
+    "aim": {
+      "en": "Aim",
+      "uk": "Прицілювання"
+    },
+    "attack": {
+      "en": "Attack",
+      "uk": "Атака"
+    },
+    "unequip_weapon": {
+      "en": "Unequip Weapon",
+      "uk": "Прибрати зброю"
+    },
+    "toggle_weapon": {
+      "en": "Toggle Weapon",
+      "uk": "Змінити зброю"
+    },
+    "fire": {
+      "en": "Fire",
+      "uk": "Постріл"
+    },
+    "reload": {
+      "en": "Reload",
+      "uk": "Перезаряджання"
+    },
+    "axe": {
+      "en": "Axe",
+      "uk": "Сокира"
+    },
+    "pistol": {
+      "en": "Pistol",
+      "uk": "Пістолет"
+    },
+    "shotgun": {
+      "en": "Shotgun",
+      "uk": "Дробовик"
+    },
+    "heartbreak": {
+      "en": "Use Heartbreak",
+      "uk": "Застосувати Серцеїда"
+    },
+    "ui_perfect_combo": {
+      "en": "Perfect!",
+      "uk": "Ідеально!"
+    },
+    "ui_heartbreak_ready_1st_person": {
+      "en": "Press <button> to Heartbreak!",
+      "uk": "Натисніть <button>, щоб застосувати Серцеїда!"
+    },
+    "ui_heartbreak_ready_3rd_person": {
+      "en": "Heartbreak Ready!",
+      "uk": "Серцеїд готовий!"
+    },
+    "ui_heartbreak_active": {
+      "en": "FIRE!!",
+      "uk": "ВОГОНЬ!!"
+    },
+    "controller_disconnect": {
+      "en": "Controller disconnected.\nPlease reconnect a controller to continue.",
+      "uk": "Контролер від'єднано.\nПід'єднайте контролер, щоб продовжити."
+    }
+  }
+}
