@@ -5,6 +5,7 @@ Usage (from the game folder):
     python tools\\extract.py
     python tools\\extract.py --bundle-dir "D:\\...\\StandaloneWindows64"
     python tools\\extract.py --out translations\\uk
+    python tools\\extract.py --no-english   (omit the source strings)
 
 The script is read-only: it never modifies the game files.  It writes
 
@@ -15,6 +16,11 @@ The script is read-only: it never modifies the game files.  It writes
 
 Only the "uk" values have to be filled in.  Empty values fall back to English
 inside the game, so a partially translated file is always safe.
+
+`--no-english` drops every `"en"` key.  The published repository ships the
+files that way: the English text is the publisher's, and `apply.py` does not
+need it.  Run the default export when you want the source strings as a
+translation reference.
 """
 
 from __future__ import annotations
@@ -244,6 +250,17 @@ def merge_previous(out: Path, ui: dict, dialogue: dict, assets: dict) -> int:
     return kept
 
 
+def strip_english(payload) -> None:
+    """Remove every `en` key from an exported structure."""
+    if isinstance(payload, dict):
+        payload.pop("en", None)
+        for value in payload.values():
+            strip_english(value)
+    elif isinstance(payload, list):
+        for item in payload:
+            strip_english(item)
+
+
 # --------------------------------------------------------------------------
 # main
 # --------------------------------------------------------------------------
@@ -253,6 +270,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--bundle-dir", type=Path, default=swc.BUNDLE_DIR)
     parser.add_argument("--out", type=Path,
                         default=swc.TRANSLATIONS_DIR / swc.LANGUAGE_CODE)
+    parser.add_argument("--no-english", action="store_true",
+                        help="omit the English source strings; apply.py works "
+                             "without them")
     args = parser.parse_args(argv)
 
     if not args.bundle_dir.is_dir():
@@ -358,6 +378,10 @@ def main(argv: list[str] | None = None) -> int:
     kept = merge_previous(args.out, ui, dialogue, assets)
     if kept:
         swc.say(f"  kept {kept} existing Ukrainian translation(s)")
+    if args.no_english:
+        for payload in (ui, dialogue, assets):
+            strip_english(payload)
+        swc.say("  omitted the English source strings")
 
     def write(name: str, payload) -> None:
         target = args.out / name
@@ -375,8 +399,6 @@ def main(argv: list[str] | None = None) -> int:
     meta = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "language": swc.LANGUAGE_CODE,
-        "game_root": str(swc.GAME_ROOT),
-        "bundle_dir": str(args.bundle_dir),
         "bundle_count": len(paths),
         "text_tables": {
             "tables": len(canonical_tables),

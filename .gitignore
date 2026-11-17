@@ -4,10 +4,13 @@
 !/.gitignore
 !/.gitattributes
 !/README.md
+!/LICENSE
+!/NOTICE.md
 !/requirements.txt
 !/run.cmd
 !/tools/
 !/translations/
+!/screenshots/
 
 # Local backups and build output
 _uk_backup/
@@ -18,13 +21,10 @@ tools/AssemblyPatcher/obj/
 __pycache__/
 *.py[cod]
 
-# Large binary fonts are supplied separately (see translations/uk/fonts)
-translations/uk/fonts/*.ttf
-translations/uk/fonts/*.otf
-
 # OS / editor
 .DS_Store
 Thumbs.db
 .vs/
 .vscode/
 *.user
+translations/uk/meta.json

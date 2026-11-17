@@ -1,18 +1,18 @@
-# Replacement fonts
+# Заміна шрифтів
 
-Drop the prepared fonts in this folder, then run:
+Покладіть підготовлені шрифти в цю папку та виконайте:
 
 ```bat
-python tools\apply.py --fonts            (preview)
-python tools\apply.py --fonts --apply    (writes the bundles)
+python tools\apply.py --fonts            (перегляд)
+python tools\apply.py --fonts --apply    (запис у бандли)
 ```
 
-`run.cmd apply` also picks them up, because it passes `--fonts`.
+`run.cmd apply` також застосовує їх, бо передає `--fonts`.
 
-A file replaces the in-game **Font** asset whose name matches the file name
-(without the extension, case-insensitive). `NotoSansJP-Regular.ttf` replaces
-`NotoSansJP-Regular`, and so on. If the file has a different name, add a
-`fonts.json` next to it:
+Файл замінює ігровий ресурс **Font**, ім'я якого збігається з іменем файлу
+(без розширення, без урахування регістру). `NotoSansJP-Regular.ttf` замінює
+`NotoSansJP-Regular` тощо. Якщо файл має інше ім'я, додайте поруч
+`fonts.json`:
 
 ```json
 {
@@ -20,62 +20,73 @@ A file replaces the in-game **Font** asset whose name matches the file name
 }
 ```
 
-## Fonts to prepare
+## Шрифти в цьому репозиторії
 
-These six are the **source TTFs of dynamic TMP font assets**. They are the only
-fonts the game rasterises at runtime, so replacing them is enough to change the
-Cyrillic glyphs.
+Репозиторій містить **два** кириличні шрифти, які замінюють усі шість
+вихідних TTF гри. Зіставлення задане у `fonts.json`:
 
-| File to provide | Original size | Used as the fallback of |
-|---|---:|---|
-| `NotoSansJP-Regular.ttf` | 5.7 MB | `Geo-Regular SDF`, `Trispace-Regular SDF` |
-| `NotoSansTC-Regular.ttf` | 7.1 MB | `Geo-Regular SDF`, `Trispace-Regular SDF` |
-| `NotoSansSC-Regular.ttf` | 10.6 MB | `Geo-Regular SDF`, `Trispace-Regular SDF` |
-| `NotoSerifJP-Regular.ttf` | 8.0 MB | `NewRocker-Regular SDF` |
-| `NotoSerifTC-Regular.ttf` | 10.0 MB | `NewRocker-Regular SDF` |
-| `NotoSerifSC-Regular.ttf` | 14.8 MB | `NewRocker-Regular SDF` |
+| Файл | Замінює ресурси | Призначення |
+|---|---|---|
+| `NotoSans-Regular.ttf` | `NotoSansJP-Regular`, `NotoSansTC-Regular`, `NotoSansSC-Regular` | фолбек для `Geo-Regular SDF` і `Trispace-Regular SDF` |
+| `NotoSerif-Regular.ttf` | `NotoSerifJP-Regular`, `NotoSerifTC-Regular`, `NotoSerifSC-Regular` | фолбек для `NewRocker-Regular SDF` |
 
-`LiberationSans.ttf` is optional: the shipped copy already contains the full
-Ukrainian alphabet. Replace it only if you want a different look for text that
-uses the built-in Unity font.
+Ці шість ресурсів — **вихідні TTF динамічних TMP-шрифтів**. Це єдині
+шрифти, які гра растеризує під час роботи, тому їх заміни достатньо, щоб
+змінити кириличні гліфи.
 
-### Requirements
+`LiberationSans.ttf` замінювати не потрібно: вбудована копія вже містить
+повну українську абетку.
 
-* **Keep the CJK coverage.** The originals are Noto Sans/Serif CJK JP/TC/SC
-  subsets. A replacement that only has Latin + Cyrillic will break Chinese and
-  Japanese text. Use the full Noto Sans CJK / Noto Serif CJK variants (or a
-  font that also covers the same CJK range).
-* **Contain the Ukrainian letters** `і ї є ґ І Ї Є Ґ`. The apply step reports
-  which letters are missing and the verify step fails if a dynamic font cannot
-  draw them.
-* Prefer the same Noto CJK family. The apply step warns when the replacement's
-  `unitsPerEm` differs from the original, because TMP keeps the line metrics
-  baked into the font asset.
-* TTF or OTF, any `unitsPerEm`; TMP reads the glyph metrics from the file.
+### Вимоги
 
-## Fonts that cannot be replaced this way
+* **Містити українські літери** `і ї є ґ І Ї Є Ґ`. Крок застосування
+  повідомляє, яких літер бракує, а перевірка завершується помилкою, якщо
+  динамічний шрифт не може їх намалювати.
+* **Зберігати CJK-покриття**, якщо потрібні японська та китайська мови.
+  Оригінали — це підмножини Noto Sans/Serif CJK JP/TC/SC. Заміна лише з
+  латиницею та кирилицею зламає японський і китайський текст; використовуйте
+  повні варіанти Noto Sans CJK / Noto Serif CJK.
+* Бажано зберігати ту саму родину Noto CJK. Крок застосування попереджає,
+  якщо `unitsPerEm` заміни відрізняється від оригіналу, бо TMP зберігає
+  метрики рядка, вбудовані в ресурс шрифту.
+* TTF або OTF, будь-який `unitsPerEm`; TMP читає метрики гліфів із файлу.
 
-These are **static** TMP assets: their glyphs are baked into an atlas texture,
-so replacing the TTF has no effect. They contain no Cyrillic and draw it
-through the Noto fallbacks above:
+> **Важливо:** ці два шрифти містять **0 CJK-гліфів**. Якщо вибрати японську,
+> спрощену чи традиційну китайську, текст цими мовами відображатиметься
+> порожніми квадратами. Українська, англійська, французька та іспанська
+> працюють повністю. Щоб зберегти CJK, покладіть сюди повні Noto Sans CJK /
+> Noto Serif CJK і оновіть `fonts.json`.
 
-| Static asset | Cyrillic supplied by |
+## Шрифти, які не можна замінити в такий спосіб
+
+Це **статичні** TMP-ресурси: їхні гліфи вбудовані в текстуру-атлас, тому
+заміна TTF ні на що не впливає. Вони не містять кирилиці й малюють її через
+Noto-фолбеки вище:
+
+| Статичний ресурс | Кирилиця надходить із |
 |---|---|
 | `Geo-Regular SDF` | `NotoSansJP-Regular SDF (Geo)` → Sans JP/TC/SC |
 | `NewRocker-Regular SDF` | `NotoSerifJP-Regular SDF (New Rocker)` → Serif JP/TC/SC |
 | `Trispace-Regular SDF` | `NotoSansJP-Regular SDF (Trispace)` → Sans JP/TC/SC |
-| `SWC-DamageNumbers` | Serif JP/TC/SC (damage numbers only) |
-| `Blood-Gore` | no text |
+| `SWC-DamageNumbers` | Serif JP/TC/SC (лише цифри шкоди) |
+| `Blood-Gore` | без тексту |
 
-If you want the *display* style itself for Cyrillic, a new TMP font asset would
-have to be generated in Unity; a TTF replacement is not enough.
+Якщо потрібен саме *дисплейний* стиль для кирилиці, доведеться згенерувати
+новий TMP-ресурс шрифту в Unity; заміни TTF недостатньо.
 
-## Verify
+## Перевірка
 
 ```bat
 python tools\verify.py
 ```
 
-The `Font coverage` section lists every dynamic source font, the fallback chain
-of each display font, and which font actually supplies Cyrillic. A missing
-letter is reported as `MISSING і/ї/є/ґ`.
+Розділ `Font coverage` перелічує кожен динамічний вихідний шрифт, ланцюжок
+фолбеків кожного дисплейного шрифту та те, який шрифт насправді дає
+кирилицю. Відсутня літера позначається як `MISSING і/ї/є/ґ`.
+
+## Ліцензія
+
+`NotoSans-Regular.ttf` і `NotoSerif-Regular.ttf` — це шрифти Noto під
+[SIL Open Font License 1.1](OFL.txt). Вони поширюються разом із цим
+перекладом на умовах OFL; назви Noto не можна використовувати для похідних
+шрифтів.

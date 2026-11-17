@@ -80,10 +80,12 @@ class Translations:
         return str(table_data[field].get("uk") or "")
 
     def ui_default(self, table: str, field: str) -> str | None:
+        """English label, or the Ukrainian one when `en` was stripped."""
         table_data = self.ui.get(table)
         if table_data is None or field not in table_data:
             return None
-        return str(table_data[field].get("en") or "")
+        data = table_data[field]
+        return str(data.get("en") or data.get("uk") or "")
 
     def stats(self) -> dict:
         dialogue_total = len(self.dialogue)
@@ -124,6 +126,7 @@ def patch_text_table(table, table_name: str, translations: Translations) -> bool
     # "language_option_uk" is a synthetic entry created by extract.py
     default_label = translations.ui_default(table_name, "language_option_uk")
     if default_label is not None:
+        default_label = default_label or swc.LANGUAGE_LABEL
         fields = swc.text_table_fields(table)
         if "language_option_uk" not in fields and table.m_fieldValues:
             uk_label = translations.ui_value(table_name, "language_option_uk")

@@ -1,144 +1,134 @@
-# Українська — translation files
+# Українська — файли перекладу
 
-These JSON files were exported from the game by `run.cmd extract`. Fill in the
-`"uk"` values, then run `run.cmd apply` in the game folder.
+Ці JSON-файли експортовано з гри командою `run.cmd extract`. Заповніть
+значення `"uk"`, після чого виконайте `run.cmd apply` у папці гри.
 
-## Files
+У репозиторії навмисно немає англійських рядків (`"en"`): це текст видавця, і
+він не публікується. `run.cmd extract` додає його локально з вашої копії гри як
+довідку для перекладача.
 
-| File | What to translate |
+## Файли
+
+| Файл | Що перекладати |
 | --- | --- |
-| `ui_text.json` | menus, buttons, settings, prompts — 426 strings in 7 TextTables. Grouped by table name, then by field name. |
-| `dialogue.json` | 6290 dialogue lines in 820 conversations. Grouped by conversation; each entry has `speaker`, `en`, `uk`. |
-| `assets.json` | 146 characters, 76 items and 262 locations (898 fields with names/descriptions). |
-| `meta.json` | export statistics. **Do not edit** (ignored by the apply step). |
+| `ui_text.json` | меню, кнопки, налаштування, підказки — 426 рядків у 7 TextTable. Згруповано за назвою таблиці, потім за назвою поля. |
+| `dialogue.json` | 6290 реплік діалогів у 820 розмовах. Згруповано за розмовою; кожен запис має `speaker` і `uk`. |
+| `assets.json` | 146 персонажів, 76 предметів і 262 локації (898 полів із назвами/описами). |
+| `meta.json` | статистика експорту; генерується локально й у репозиторії відсутня. **Не редагувати** (крок застосування її ігнорує). |
 
-## Status
+## Статус
 
-| File | Translated |
+| Файл | Перекладено |
 | --- | --- |
-| `ui_text.json` | 425/426 (one intentionally empty prompt) |
-| `assets.json` | 855/855 non-empty fields (43 fields are empty in English too) |
+| `ui_text.json` | 425/426 (одна підказка навмисно порожня) |
+| `assets.json` | 855/855 непорожніх полів (43 поля порожні і в англійській) |
 | `dialogue.json` | 6290/6290 (100%) |
 
-## Ground rules
+## Правила
 
-* Translate only the `"uk"` field. Do not change `"en"`, `id`, table names,
-  field names or the JSON structure — the apply step looks text up by those.
-* `"uk": ""` means *not translated yet*: the game shows the English text for
-  that line. Nothing breaks, so translate at your own pace.
-* Keep the file UTF-8 (with or without BOM is fine). Use a JSON-aware editor
-  (VS Code, Notepad++, JSON Editor Online) to avoid broken commas/quotes.
-* Newlines inside a string must be escaped as `\n`, quotes as `\"`.
-* Placeholders such as `<color=...>`, `[var=...]`, `{0}`, `\n` and names in
-  square brackets must be kept exactly as they are in the English text.
-* `en` is a snapshot of the current English line, useful as reference. If the
-  game gets updated, re-run `run.cmd extract` — it keeps existing `uk` values
-  for lines that still exist (merge by conversation id + entry id).
+* Перекладайте лише поле `"uk"`. Не змінюйте `id`, назви таблиць, назви полів
+  або структуру JSON — крок застосування шукає текст саме за ними. Якщо ви
+  запускали `run.cmd extract`, не редагуйте і доданий ним `"en"`.
+* `"uk": ""` означає *ще не перекладено*: гра покаже англійський текст для
+  цього рядка. Нічого не ламається, тому перекладайте у власному темпі.
+* Зберігайте файл у UTF-8 (з BOM або без — не має значення). Використовуйте
+  редактор, що розуміє JSON (VS Code, Notepad++, JSON Editor Online), щоб
+  уникнути зламаних ком і лапок.
+* Переноси рядків усередині рядка екрануються як `\n`, лапки — як `\"`.
+* Плейсхолдери, як-от `<color=...>`, `[var=...]`, `{0}`, `\n` та імена в
+  квадратних дужках, мають залишатися точно такими, як в англійському тексті.
+* `en` (з'являється після `run.cmd extract`) — знімок поточного англійського
+  рядка, корисний як довідка. Якщо гру оновлено, повторно виконайте
+  `run.cmd extract` — він збереже наявні значення `uk` для рядків, що все ще
+  існують (злиття за id розмови + id запису). Щоб експортувати без `en`,
+  додайте `--no-english`.
 
-## Glossary used in `ui_text.json`
+## Глосарій
 
-Keep these consistent when translating `dialogue.json` and `assets.json`:
+Повний затверджений глосарій (персонажі, зброя, локації) наведено в
+кореневому [`README.md`](../../README.md#-затверджений-глосарій). Дотримуйтеся
+його під час перекладу `ui_text.json`, `dialogue.json` та `assets.json`.
 
-| English | Українська |
-| --- | --- |
-| Michelle | Мішель |
-| Darrel | Даррел |
-| Oakley | Оуклі |
-| Chamuel | Чамуель |
-| Robyn | Робін |
-| Clarissa | Клариса |
-| Benedict | Бенедикт |
-| The Duchess | Герцогиня |
-| Dream Eater | Пожирачка снів |
-| Third Eye | Третє око |
-| Heartbreak / Heartbreaker | Серцеїд |
-| Hellhound (pistol) | Пекельний гончак |
-| Hellfire (shotgun) | Пекельне полум'я |
-| Devil's Maw (axe) | Паща диявола |
-| Logbook | Журнал |
-| Yowza / Yowzas | Йовза / Йовзи (у реченнях: йовзу / йовз) |
-| Artifacts | Артефакти |
-| Upgrades | Покращення |
-| Time Attack | Випробування на час |
-| New Game+ | Нова гра+ |
-| Her Royal Deadness | Її Королівська Мертвість |
-| Mimi the Conqueror | Мімі Завойовниця |
+## Порядок роботи
 
-## Order of work that feels best
+1. `ui_text.json` → меню налаштувань і випадаючий список мов (швидкий результат).
+2. `dialogue.json` → розмова за розмовою; кожен запис має свого мовця.
+3. `assets.json` → назви, що показуються в журналі/інвентарі.
 
-1. `ui_text.json` → the settings menu and the language dropdown (quick win).
-2. `dialogue.json` → conversation by conversation; each entry has its speaker.
-3. `assets.json` → names shown in the journal/inventory.
+## Перевірка прогресу
 
-## Checking progress
-
-`run.cmd apply` prints how many UI strings / dialogue lines / asset fields are
-filled, e.g.
+`run.cmd apply` друкує, скільки рядків UI / діалогів / полів активів заповнено,
+наприклад:
 
 ```
 Progress : UI 0/426, dialogue 0/6290, assets 0/898
 ```
 
-Only filled values are written as Ukrainian; empty ones fall back to English.
+Лише заповнені значення записуються як українські; порожні повертаються до
+англійської.
 
-## Game files changed or added
+## Змінені або додані файли гри
 
-### Changed by `run.cmd apply`
+### Змінені командою `run.cmd apply`
 
-| Path (relative to the game folder) | Change |
+| Шлях (відносно папки гри) | Зміна |
 | --- | --- |
-| `Sorry We're Closed_Data\StreamingAssets\aa\StandaloneWindows64\*.bundle` | 86 of the 152 Addressables bundles receive the `uk` language column, the extra language-dropdown option, the dialogue/asset translations and the prepared source fonts. The exact file names are listed in `_uk_backup\manifest.json`. |
-| `Sorry We're Closed_Data\Managed\Assembly-CSharp.dll` | Two IL edits in `LanguageSettings`: dropdown index 6 calls `DialogueManager.SetLanguage("uk")`, and a Ukrainian system locale selects index 6 on first launch. |
+| `Sorry We're Closed_Data\StreamingAssets\aa\StandaloneWindows64\*.bundle` | 86 зі 152 Addressables-бандлів отримують колонку мови `uk`, додатковий пункт випадаючого списку мов, переклад діалогів/активів і підготовлені вихідні шрифти. Точні імена файлів — у `_uk_backup\manifest.json`. |
+| `Sorry We're Closed_Data\Managed\Assembly-CSharp.dll` | Дві IL-правки в `LanguageSettings`: пункт 6 викликає `DialogueManager.SetLanguage("uk")`, а українська системна локаль вибирає пункт 6 під час першого запуску. |
 
-Nothing else in the game folder is modified. `Sorry We're Closed_Data\data.unity3d`
-is only read: it supplies the built-in `LiberationSans` TTF that the verify
-step inspects.
+Нічого іншого в папці гри не змінюється. `Sorry We're Closed_Data\data.unity3d`
+лише читається: звідти береться вбудований TTF `LiberationSans`, який перевіряє
+крок верифікації.
 
-### Added for the translation and rollback
+### Додані для перекладу та відкату
 
-| Path | Contents |
+| Шлях | Вміст |
 | --- | --- |
-| `translations\uk\` | Translation source: `ui_text.json`, `dialogue.json`, `assets.json`, `meta.json` and this README. |
-| `translations\uk\fonts\` | Optional Cyrillic replacements for the six dynamic game fonts; see `fonts\README.md`. |
-| `tools\` | `extract.py`, `apply.py`, `restore.py`, `verify.py`, `lib_swc.py`, `fonts.py` and `AssemblyPatcher\`. |
-| `run.cmd` | One entry point: `extract`, `apply`, `restore`, `verify`. |
-| `_uk_backup\` | Pristine copies of the 86 patched bundles plus `manifest.json` (original and patched SHA-256). Used by `run.cmd restore`; also what makes repeated applies safe. |
-| `Sorry We're Closed_Data\Managed\Assembly-CSharp.dll.uk_backup` | Original assembly, created next to the DLL on the first patch. |
+| `translations\uk\` | Джерело перекладу: `ui_text.json`, `dialogue.json`, `assets.json` і цей README. |
+| `translations\uk\fonts\` | Кириличні заміни для шести динамічних шрифтів гри; див. `fonts\README.md`. |
+| `tools\` | `extract.py`, `apply.py`, `restore.py`, `verify.py`, `lib_swc.py`, `fonts.py` і `AssemblyPatcher\`. |
+| `run.cmd` | Єдина точка входу: `extract`, `apply`, `restore`, `verify`. |
+| `_uk_backup\` | Незаймані копії 86 пропатчених бандлів плюс `manifest.json` (SHA-256 оригіналу й патчу). Використовується `run.cmd restore`; саме це робить повторне застосування безпечним. |
+| `Sorry We're Closed_Data\Managed\Assembly-CSharp.dll.uk_backup` | Оригінальна збірка, створюється поруч із DLL під час першого патчу. |
 
-### Sharing the translation
+### Поширення перекладу
 
-* **Recommended:** share `translations\uk\`, `tools\`, `run.cmd` and
-  `requirements.txt`. The recipient drops them into their own game folder and
-  runs `run.cmd apply`. It rebuilds everything from their own untouched files,
-  so it works with any copy of the same game version. They need Python with
-  `UnityPy` and `fontTools`, plus the .NET 8 SDK (see the top-level `README.md`).
-* **Drop-in only:** you can also share the 86 patched `.bundle` files and the
-  patched `Assembly-CSharp.dll`, copied over the same paths. This only works for
-  the exact same game build: bundle names are content hashes, and a different
-  build may use different names or contents. Never mix bundles from two builds.
-* Do **not** include `_uk_backup\` in a drop-in package; it is only needed to
-  restore or re-apply on the machine that created it. Keep your own copy.
+* **Рекомендовано:** поділіться `translations\uk\`, `tools\`, `run.cmd` і
+  `requirements.txt`. Отримувач кладе їх у свою папку гри та виконує
+  `run.cmd apply`. Усе збирається з його власних незмінених файлів, тому
+  працює з будь-якою копією тієї самої версії гри. Йому потрібні Python з
+  `UnityPy` і `fontTools`, а також .NET 8 SDK (див. кореневий `README.md`).
+* **Готові файли:** не поширюйте пропатчені `.bundle` чи `Assembly-CSharp.dll`
+  без письмового дозволу правовласника. Для особистого використання їх створює
+  `run.cmd apply` з вашої власної копії гри. Статус дозволу на публікацію —
+  у кореневому `README.md`.
+* **Не** включайте `_uk_backup\` до пакета готових файлів; він потрібен лише
+  для відкату або повторного застосування на машині, де його створено.
+  Зберігайте власну копію.
 
-## Translating
+## Переклад
 
-The JSON files are plain text and can be edited in any external tool. Keep the
-existing structure: `ui_text.json` and `assets.json` use `{ "uk": "..." }`
-values, `dialogue.json` uses `conversations[].entries[]` with `id` and `uk`, and
-markup tags / placeholders must stay identical to the English source.
-`apply.py` reads the finished files and does not merge partial work.
+JSON-файли — це звичайний текст, їх можна редагувати будь-яким зовнішнім
+інструментом. Зберігайте наявну структуру: `ui_text.json` і `assets.json`
+використовують значення `{ "uk": "..." }`, `dialogue.json` —
+`conversations[].entries[]` з `id` і `uk`, а теги розмітки / плейсхолдери
+мають залишатися ідентичними англійському джерелу (запустіть `run.cmd extract`,
+щоб побачити оригінал). `apply.py` лише читає готові файли й не об'єднує
+часткову роботу.
 
-## Fonts
+## Шрифти
 
-The game's display fonts (`Geo-Regular SDF`, `NewRocker-Regular SDF`,
-`Trispace-Regular SDF`) are static atlases without Cyrillic; they draw it
-through the dynamic Noto fallbacks. The Cyrillic glyphs therefore come from six
-replaceable source TTFs:
+Дисплейні шрифти гри (`Geo-Regular SDF`, `NewRocker-Regular SDF`,
+`Trispace-Regular SDF`) — це статичні атласи без кирилиці; вони малюють її
+через динамічні Noto-фолбеки. Тому кириличні гліфи надходять із шести
+замінних вихідних TTF:
 
 `NotoSansJP-Regular`, `NotoSansTC-Regular`, `NotoSansSC-Regular`,
 `NotoSerifJP-Regular`, `NotoSerifTC-Regular`, `NotoSerifSC-Regular`.
 
-Put a Cyrillic version of each (keeping its CJK coverage) into
-`translations\uk\fonts\` and run `python tools\apply.py --fonts --apply`, or
-simply `run.cmd apply`. See `translations\uk\fonts\README.md` for the naming
-rules and the optional `fonts.json` mapping. If the letters show as empty
-boxes, check the `Font coverage` section of `python tools\verify.py`.
+Покладіть кириличну версію кожного (зі збереженням CJK-покриття) у
+`translations\uk\fonts\` і виконайте `python tools\apply.py --fonts --apply`
+або просто `run.cmd apply`. Див. `translations\uk\fonts\README.md` щодо
+правил іменування та необов'язкового зіставлення `fonts.json`. Якщо літери
+показуються як порожні квадрати, перегляньте розділ `Font coverage` у
+`python tools\verify.py`.

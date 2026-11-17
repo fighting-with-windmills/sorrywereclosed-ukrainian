@@ -1,235 +1,212 @@
-# Ukrainian localization for *Sorry We're Closed*
+# 🇺🇦 Українська локалізація *Sorry We're Closed*
 
-Tools that add **Українська** to the in-game language menu (7th entry, index
-`6`, language code `uk`) and write Ukrainian text into the game's Addressables
-bundles.
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/en/5/57/Sorry_We%27re_Closed_Cover.jpg" alt="Обкладинка Sorry We're Closed" width="460"><br>
+  <sub>Обкладинка © à la mode games. Використовується лише для ідентифікації гри.</sub>
+</p>
 
-The patch is reversible: original bundle bytes are copied to `_uk_backup/`, and
-the original assembly to
-`Sorry We're Closed_Data/Managed/Assembly-CSharp.dll.uk_backup`.
+![Status](https://img.shields.io/badge/status-100%25%20translated-brightgreen)
+![Language](https://img.shields.io/badge/language-Ukrainian-blue)
+![Game](https://img.shields.io/badge/game-Sorry%20We%27re%20Closed-purple)
 
----
+Повна текстова локалізація неонової горор-адвенчури **Sorry We're Closed** українською мовою. Усі файли гри пройшли повний цикл перекладу, стилістичної редактури, канонічної звірки з лором та технічної валідації.
 
-## Requirements
-
-| What | Why | Install |
-| --- | --- | --- |
-| Python 3.10+ | runs the scripts | <https://www.python.org/downloads/> |
-| `UnityPy` >= 1.20 | reads/writes Unity bundles | `python -m pip install -r requirements.txt` |
-| `fontTools` | validates replacement fonts | included in `requirements.txt` |
-| .NET 8 SDK | builds the IL patcher (language menu) | <https://dotnet.microsoft.com/download> |
-
-Run everything from the game folder. **Close the game first** — the apply step
-rewrites files inside the installation. A full run takes roughly 10–30 minutes
-because all 152 Addressables bundles are scanned.
+> **Це неофіційний фанатський переклад.** Він не пов'язаний з à la mode games
+> чи Akupara Games і не схвалений ними. Усі права на гру та її вміст належать
+> відповідним правовласникам.
 
 ---
 
-## Quick start
+## 📋 Зміст
+- [Пророблена робота](#-пророблена-робота)
+- [Встановлення](#-встановлення)
+- [Затверджений глосарій](#-затверджений-глосарій)
+  - [Персонажі та граматичні форми](#персонажі-та-граматичні-форми)
+  - [Зброя, здібності та бойові терміни](#зброя-здібності-та-бойові-терміни)
+  - [Локації, заклади та предмети](#локації-заклади-та-предмети)
+- [Технічні примітки](#-технічні-примітки)
+- [Ліцензія](#-ліцензія)
+
+---
+
+## ✨ Пророблена робота
+
+* **Повне охоплення контенту:** Перекладено та вичитано 100% ігрового тексту — усі сюжетні діалоги, розгалуження фіналів, внутрішньоігрові газети (*Hellfire Times*), записки, описи предметів, записи журналу подій (`Logbook`), підказки керування та меню налаштувань.
+* **Канонічна точність:** Усі імена, титули, звертання та особливості мовлення персонажів звірені з офіційним лором гри (*Sorry We're Closed Wiki*).
+* **Точкова гендерно-нейтральна адаптація:** Для небінарних персонажів (`they/them`, `they/any`) застосовано природну для української мови величну та шанобливу множину (*«ми / ви / вони»*) у репліках із родовими закінченнями (минулий час, прикметники, присвійні займенники), зі збереженням живої розмовної динаміки в теперішньому й майбутньому часі.
+* **Уніфікація термінології:** Усунено всі розбіжності між ранніми та пізніми розділами сценарію, журналом подій і системним інтерфейсом.
+* **Валідація структури JSON:** Збережено всі оригінальні керуючі теги рушія (`<wiggle>`, `<shake>`, `<i>`, `<Action>`, змінні `<itemName>`, `<price>`, `<slot>`), перевірено синтаксис і кодування `UTF-8`.
+
+---
+
+## 🛠 Встановлення
+
+Є два способи. Основний — зібрати локалізацію локально з вихідників: так
+поширюється лише код і текст перекладу, без бінарників гри.
+
+### Варіант 1 — збірка з вихідників (`run.cmd`) — рекомендовано
+
+Для тих, хто хоче застосувати переклад самостійно або повторити його після
+патчу гри.
+
+**Що потрібно:**
+
+- Windows;
+- Python 3.10+ ([python.org](https://www.python.org/downloads/));
+- .NET 8 SDK ([dotnet.microsoft.com](https://dotnet.microsoft.com/download));
+- ~2 ГБ вільного місця для резервних копій.
+
+**Кроки:**
+
+1. Склонуйте репозиторій у будь-яку тимчасову папку (або скачайте ZIP):
+
+   ```bat
+   git clone <URL-репозиторію> C:\temp\swc-uk
+   ```
+
+   Потім скопіюйте `run.cmd`, `requirements.txt`, `tools\` і `translations\`
+   у корінь гри — поруч із `Sorry We're Closed.exe`. Сама гра в репозиторій
+   не входить, тому клонувати просто в папку гри не можна.
+
+2. Встановіть залежності (у папці гри):
+
+   ```bat
+   python -m pip install -r requirements.txt
+   ```
+
+3. Закрийте гру.
+
+4. (Необов'язково) Оновіть JSON-файли з поточної версії гри — це збереже вже
+   перекладені рядки та додасть англійський оригінал як довідку:
+
+   ```bat
+   run.cmd extract
+   ```
+
+5. Застосуйте переклад:
+
+   ```bat
+   run.cmd apply
+   ```
+
+   Команда створить резервні копії змінених бандлів у `_uk_backup\`, запише
+   текст і шрифти, пропатчить `Assembly-CSharp.dll` і запустить перевірку.
+
+6. Запустіть гру та оберіть **Українська** в **Settings → Language**.
+
+**Перевірка та скасування:**
 
 ```bat
-run.cmd extract     :: write translations\uk\*.json (read-only)
-                    :: translate the "uk" values
-run.cmd apply       :: patch bundles + assembly, then verify
-run.cmd verify      :: re-check a patched installation
-run.cmd restore     :: put the original files back
+run.cmd verify      :: перевірити встановлену локалізацію
+run.cmd restore     :: повернути оригінальні файли гри
 ```
 
-Then start the game → **Options → Language → Українська**.
+> Заміна шрифтів уже входить у `run.cmd apply`: файли лежать у
+> `translations\uk\fonts\`. Деталі — у `translations\uk\fonts\README.md`.
 
-Applying is safe to repeat: every run starts from the pristine backup, so no
-duplicated fields are ever created. You can translate a little, apply, play,
-translate more, apply again.
+> **Про JSON:** у репозиторії файли містять лише українські рядки — англійський
+> оригінал є власністю видавця, тому він не публікується. `run.cmd extract`
+> відновлює його локально з вашої копії гри; комітити ці зміни не потрібно.
 
-`run.cmd apply` is the same as:
+### Варіант 2 — готові файли (очікує дозволу)
 
-```bat
-python tools\apply.py --fonts --apply
-dotnet run --project tools\AssemblyPatcher -c Release -- --in-place
-python tools\verify.py
-```
+> **Статус:** я напишу видавцю (à la mode games / Akupara Games) з проханням
+> дозволити поширення готових змінених бінарників і оновлю цей README, якщо
+> щось зміниться. Поки письмового дозволу немає, архів із пропатченими
+> `.bundle` і `Assembly-CSharp.dll` не публікується.
+
+Коли архів буде доступний, встановлення зведеться до такого:
+
+1. Завантажте архів локалізації з розділу [**Releases**](../../releases).
+2. Повністю закрийте гру.
+3. Зробіть резервну копію файлів, які будете замінювати (або всієї папки гри).
+4. Скопіюйте вміст архіву в корінь встановленої гри із заміною:
+   - `Sorry We're Closed_Data\StreamingAssets\aa\StandaloneWindows64\*.bundle`
+   - `Sorry We're Closed_Data\Managed\Assembly-CSharp.dll`
+5. Запустіть гру та оберіть **Українська** в **Settings → Language**.
+
+> Архів міститиме лише змінені файли (86 зі 152 бандлів + DLL) і підходитиме
+> лише для тієї самої версії гри: імена бандлів є хешами вмісту, тому після
+> оновлення гри потрібен новий реліз.
 
 ---
 
-## Repository layout
+## 📖 Затверджений глосарій
 
-```
-run.cmd                     one entry point: extract / apply / restore / verify
-requirements.txt
-tools/
-  extract.py                export translatable strings to JSON
-  apply.py                  write the JSON into the bundles
-  restore.py                copy the backup bundles (and DLL) back
-  verify.py                 structural + font + assembly check
-  fonts.py                  source-TTF replacement helpers
-  lib_swc.py                shared bundle / TextTable / manifest helpers
-  AssemblyPatcher/          C# IL patcher for the language menu
-translations/uk/
-  ui_text.json              menus, buttons, prompts
-  dialogue.json             dialogue lines
-  assets.json               actor / item / location names
-  meta.json                 statistics about the scanned build (do not edit)
-  fonts/                    optional replacement TTFs + fonts.json
-```
+### Персонажі та граматичні форми
 
-`_uk_backup/` is created by the first apply and is not part of the repository.
+| Оригінал (EN) | Переклад (UK) | Рід / Займенники | Особливості адаптації |
+| :--- | :--- | :--- | :--- |
+| **Michelle** | **Мішель** | Жіночий (`she/her`) | Головна героїня. Жива, емоційна й трохи іронічна розмовна мова. |
+| **The Duchess** | **Герцогиня** | Множина пошани (`they/them`) | Архідемон, власниця готелю. Використовується велична множина (*pluralis majestatis*) у родових формах. |
+| **Robyn** | **Робін** | Множина пошани (`they/any`) | Небінарний демон, найкращі друзі Мішель. Узгоджена множина без змішування з одниною. |
+| **Chamuel** | **Хамуїл** | Чоловічий (`he/him`) | Ангел кохання. Традиційна українська біблійна передача імені. |
+| **Beloved** | **Коханий** | Чоловічий (`he/him`) | Ангел-наглядач. Переклад промовистого імені (*speaking name*) для збереження авторської іронії. |
+| **Dream Eater** | **Пожирач снів** | Чоловічий (`he/him`) | Демон, хлопець Хамуїла. |
+| **Massive Eyesore** | **Велетенський Окоріст** | Чоловічий (`he/him`) | Гігантський м'ясистий наріст з оком; авторський відповідник, що поєднує *око*, *наріст* і *більмо*. |
+| **Benedict** | **Бенедикт** | Чоловічий (`he/him`) | Ангел у покинутій церкві, партнер Робін. |
+| **Lucy** | **Люсі** | Жіночий (`she/her`) | Демон-спокусниця, телефонна операторка. |
+| **Clarissa** | **Кларисса** | Жіночий (`she/her`) | Ангел-танцівниця у барі Даррела (пишеться з подвоєнням). |
+| **Darrel** | **Даррел** | Чоловічий (`he/him`) | Права рука Герцогині, власник бару. |
+| **Oakley** | **Оклі** | Чоловічий (`he/him`) | Власник закусочної, хлопець Даррела. |
+| **Violet** | **Вайолет** | Жіночий (`she/her`) | Юна пекарка на міській площі. |
+| **Leslie** | **Леслі** | Жіночий (`she/her`) | Колишня дівчина Мішель. |
+| **Chef Armando** | **Шеф Армандо** | Чоловічий (`he/him`) | Головний кухар на Кухні; говорить про себе виключно в третій особі. |
+| **Jester Dan** | **Блазень Ден** | Чоловічий (`he/him`) | Конферансьє у готелі Герцогині. |
+| **T.A.D** | **М.Т.А.** | Множина пошани (`they/them`) | Мандрівний торговець артефактами (*Traveling Artifact Dealer*). |
+| **Postman Creed** | **Листоноша Крід** | Чоловічий (`he/him`) | Демон-листоноша з колоритним розмовним просторіччям. |
+| **Marty / Larry** | **Марті / Ларрі** | Чоловічий (`he/him`) | Продавець у крамниці рідкостей та старенький газетяр. |
+| **Mimi** | **Мімі** | Жіночий (`she/her`) | Домашня улюблениця (щуриця) Даррела. |
+| **Cerberus** | **Цербер** | Множина (`they/them`) | Триголовий пес-охоронець. |
 
----
+### Зброя, здібності та бойові терміни
 
-## The translation files
+| Оригінал (EN) | Переклад (UK) | Контекст використання |
+| :--- | :--- | :--- |
+| **Heartbreaker** | **Серцеїд** | Ангельська зброя та особливий постріл (*Heartbreak shot* — *постріл «Серцеїда»*). |
+| **Hellhound** | **Пекельний гончак** | Пістолет Робін. |
+| **Hellfire** | **Пекельне полум'я** | Дробовик. |
+| **Devil's Maw** | **Паща диявола** | Сокира. |
+| **The Third Eye** | **Третє око** | Здібність бачити крізь людський і демонський виміри. |
+| **Weak Points** | **Вразливі місця** | Бойовий термін (у підказках, описі зброї та налаштуваннях допомоги прицілюванню). |
+| **Time Attack** | **Гра на час** | Додатковий аркадний режим перепроходження бойових рівнів. |
 
-All files live in `translations/uk/`.
+### Локації, заклади та предмети
 
-| File | Contents |
-| --- | --- |
-| `ui_text.json` | every `TextTable` string: menus, buttons, prompts |
-| `dialogue.json` | every dialogue line, grouped by conversation |
-| `assets.json` | actor / item / location names and descriptions |
-| `meta.json` | statistics about the scanned game build (do not edit) |
-
-Rules:
-
-* Only edit the `"uk"` values. Leave `"en"`, `id`, table and field names alone.
-* An empty `"uk"` value is **not** an error: the game falls back to English for
-  that string, so a half-finished file works fine.
-* Keep valid JSON (no trailing commas). A broken file stops the apply step with
-  an error naming the file.
-* `dialogue.json` has the shape
-
-  ```json
-  {
-    "conversations": [
-      {
-        "id": 1,
-        "title": "…",
-        "entries": [
-          { "id": 5, "speaker": "Michelle", "en": "Hello.", "uk": "Привіт." }
-        ]
-      }
-    ]
-  }
-  ```
-
-  `speaker` is only a hint for the translator — the game does not read it.
-* `language_option_uk` in `ui_text.json` is the label shown in the language
-  dropdown; it is already filled with `Українська`.
-
-Translate `dialogue.json` in whatever tool you like, then keep the structure
-intact: each entry has an `id` and a `uk` value, and the markup tags /
-placeholders must match the English source. `apply.py` only reads the finished
-file; it does not create or merge partial work.
+| Оригінал (EN) | Переклад (UK) | Контекст використання |
+| :--- | :--- | :--- |
+| **Yowza / Yowzas** | **Яуза / Яузи** | Внутрішньоігрова валюта (*Яуза, Яузи, Яузу, Яузів*). |
+| **Crypt** | **Крипта** | Підземна локація під покинутою церквою. |
+| **Aquarium** | **Акваріум** | Міська локація (*Вхід до акваріума*, *Головний акваріум*). |
+| **Culture Shock** | **Culture Shock** | Назва крамниці рідкостей і платівок, де працює Марті (залишено латиницею). |
+| **Oakley's Diner** | **Закусочна Оклі** | Заклад харчування Оклі. |
+| **The Divine** | **Божественне / Всевишній** | Небесне начало, колишнє кохання Герцогині. |
+| **The Great Divide** | **Великий розкол** | Історична подія, після якої з'явилися перші демони. |
+| **Arch-Demon** | **Архідемон** | Титул Герцогині (пишеться разом за чинним українським правописом). |
+| **Pain au chocolat** | **Шоколадні булочки** | Фірмова випічка Вайолет, якою захоплюються Герцогиня. |
 
 ---
 
-## What the patch changes
+## 🔧 Технічні примітки
 
-*Every* copy of the relevant asset is patched (the game stores the same data in
-many bundles):
-
-* `TextTable` → adds language key `uk`, a numeric language id, and one `uk`
-  column value per field. Adds a synthetic `language_option_uk` entry to the
-  *Settings Menu* table.
-* Language `TMP_Dropdown` → appends a `language_option_uk` option after the
-  Simplified Chinese one.
-* `DialogueDatabase` → adds a `uk` localization field to every dialogue entry
-  and a `… uk` field for actor/item/location names.
-* Source fonts → replaces the six dynamic Noto CJK TTFs (see below).
-* `Assembly-CSharp.dll` → two small IL edits in `LanguageSettings`:
-  * `LanguageChange()`: `if (languageSettings.language == 6) DialogueManager.SetLanguage("uk");`
-  * `GetDefaultLanguage()`: `SystemLanguage.Ukrainian → 6` (first launch on a
-    Ukrainian Windows picks Ukrainian automatically).
-
-Existing languages (including Simplified Chinese) are untouched.
-
-Game files touched:
-`Sorry We're Closed_Data\StreamingAssets\aa\StandaloneWindows64\*.bundle`
-and `Sorry We're Closed_Data\Managed\Assembly-CSharp.dll`.
+* Локалізацію перевірено на версії гри **v1.0.7** з **Epic Games Store** (PC).
+* Якщо ви знайшли одруківку або неточність під час проходження, будь ласка, створіть **Issue** із зазначенням локації або точної цитати з гри.
+* Усі тексти адаптовано з урахуванням ширини інтерфейсних вікон, кнопок та діалогових рамок гри.
 
 ---
 
-## Fonts
+## 📜 Ліцензія
 
-The display fonts (`Geo-Regular SDF`, `NewRocker-Regular SDF`,
-`Trispace-Regular SDF`, `SWC-DamageNumbers`) are **static atlases** without
-Cyrillic; they draw it through the dynamic Noto fallbacks. Only the six dynamic
-source TTFs can be replaced:
+* **Код** (`tools\`, `run.cmd`, `tools\AssemblyPatcher\`) — MIT; повний текст у
+  [`LICENSE`](LICENSE).
+* **Шрифти** `NotoSans-Regular.ttf` і `NotoSerif-Regular.ttf` — SIL Open Font
+  License 1.1; повний текст у
+  [`translations\uk\fonts\OFL.txt`](translations/uk/fonts/OFL.txt).
+* **Текст перекладу** (`translations\uk\*.json`) — внесок перекладачів. Це
+  похідна робота від сценарію гри, тому вона не надає жодних прав на
+  оригінальний твір і призначена для використання з легально придбаною копією
+  гри.
+* **Гра та її вміст** — © à la mode games. Репозиторій не містить бінарників
+  гри.
 
-`NotoSansJP-Regular`, `NotoSansTC-Regular`, `NotoSansSC-Regular`,
-`NotoSerifJP-Regular`, `NotoSerifTC-Regular`, `NotoSerifSC-Regular`.
-
-Put a Cyrillic version of each into `translations\uk\fonts\` using the same
-name (`NotoSansJP-Regular.ttf`, …). An optional `fonts.json` maps an asset name
-to a differently named file:
-
-```json
-{ "NotoSansJP-Regular": "NotoSansCJKjp-Regular.otf" }
-```
-
-`run.cmd apply` passes `--fonts` automatically. To replace only the fonts:
-
-```bat
-python tools\apply.py --fonts           (preview)
-python tools\apply.py --fonts --apply   (writes bundles, backs them up)
-```
-
-A replacement must keep the font's CJK coverage, otherwise Chinese/Japanese
-text breaks. The apply step warns when a replacement drops CJK glyphs or
-changes `unitsPerEm`. See `translations\uk\fonts\README.md` for the full list.
-
----
-
-## Restoring
-
-```bat
-run.cmd restore
-```
-
-copies `_uk_backup\*.bundle` and `Assembly-CSharp.dll.uk_backup` back. A
-full backup needs roughly as much space as the modified bundles (~1.5 GB).
-Steam → *Verify integrity of game files* also reverts everything.
-
-**After a game update** the bundles are replaced, so run `run.cmd apply` again
-(`run.cmd extract` first if the text itself changed).
-
----
-
-## Command-line reference
-
-```bat
-python tools\extract.py [--bundle-dir DIR] [--out DIR]
-python tools\apply.py [--apply] [--only NAME] [--force]
-                      [--fonts] [--font-dir DIR]
-                      [--no-ui] [--no-dialogue] [--no-dropdown]
-                      [--translations DIR] [--bundle-dir DIR] [--backup-dir DIR]
-python tools\restore.py [--assembly] [--bundle-dir DIR] [--backup-dir DIR]
-python tools\verify.py [--bundle-dir DIR] [--check-assembly]
-dotnet run --project tools\AssemblyPatcher -c Release -- --in-place
-dotnet run --project tools\AssemblyPatcher -c Release -- --check
-dotnet run --project tools\AssemblyPatcher -c Release -- --restore
-```
-
-`apply.py` without `--apply` is a dry run: it reports the same counters but
-writes nothing. `--only NAME` limits the work to bundles whose file name
-contains `NAME` (useful for tests). `--force` re-backs-up bundles that changed
-after the first run.
-
----
-
-## Troubleshooting
-
-**`і`, `ї`, `є`, `ґ` appear as empty boxes.**
-The replacement fonts are missing the letters. Check the `Font coverage`
-section of `python tools\verify.py`; it lists every dynamic source font and
-which font actually supplies Cyrillic for each display font.
-
-**The menu shows `language_option_uk` as literal text.**
-The Settings Menu `TextTable` was not patched — run `run.cmd apply` again and
-check the verify output.
-
-**The game still uses English after choosing Українська.**
-`Assembly-CSharp.dll` was not patched (Steam update? wrong install?). Run
-`dotnet run --project tools\AssemblyPatcher -c Release -- --check`.
-
-**Chinese/Japanese text broke.**
-The replacement fonts have no CJK glyphs. Restore with `run.cmd restore`, then
-use Noto Sans CJK / Noto Serif CJK files (they include Cyrillic).
+Докладніше — у [`NOTICE.md`](NOTICE.md).
